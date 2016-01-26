@@ -1,0 +1,1056 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1084, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="menuTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="menuTools.Text" xml:space="preserve">
+    <value>(&amp;T)ools</value>
+  </data>
+  <data name="menuNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="menuNew.Text" xml:space="preserve">
+    <value>&amp;New</value>
+  </data>
+  <data name="menuLoad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="menuLoad.Text" xml:space="preserve">
+    <value>&amp;Load</value>
+  </data>
+  <data name="menuSave.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="menuSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="menuSave.Text" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="menuPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="menuPrint.Text" xml:space="preserve">
+    <value>&amp;Print</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 6</value>
+  </data>
+  <data name="menuVolumeByHeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="menuVolumeByHeight.Text" xml:space="preserve">
+    <value>Volume by &amp;Height</value>
+  </data>
+  <data name="menuVolumeByUllage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="menuVolumeByUllage.Text" xml:space="preserve">
+    <value>Volume by &amp;Ullage</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 6</value>
+  </data>
+  <data name="menuAutoCalculate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="menuAutoCalculate.Text" xml:space="preserve">
+    <value>&amp;Auto calculate</value>
+  </data>
+  <data name="menuCalculate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="menuCalculate.Text" xml:space="preserve">
+    <value>&amp;Calculate</value>
+  </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 439</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1084, 22</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
+  <data name="lblStatus.Text" xml:space="preserve">
+    <value>Not saved</value>
+  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>248, 17</value>
+  </metadata>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlMassOfOil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="txtOperatorName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="txtOperatorName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>956, 3</value>
+  </data>
+  <data name="txtOperatorName.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="txtOperatorName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtOperatorName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtOperatorName.Name" xml:space="preserve">
+    <value>txtOperatorName</value>
+  </data>
+  <data name="&gt;&gt;txtOperatorName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtOperatorName.Parent" xml:space="preserve">
+    <value>pnlMassOfOil</value>
+  </data>
+  <data name="&gt;&gt;txtOperatorName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblOperatorName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lblOperatorName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblOperatorName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>850, 6</value>
+  </data>
+  <data name="lblOperatorName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblOperatorName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblOperatorName.Text" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="lblOperatorName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblOperatorName.Name" xml:space="preserve">
+    <value>lblOperatorName</value>
+  </data>
+  <data name="&gt;&gt;lblOperatorName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblOperatorName.Parent" xml:space="preserve">
+    <value>pnlMassOfOil</value>
+  </data>
+  <data name="&gt;&gt;lblOperatorName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlMassOfOil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 382</value>
+  </data>
+  <data name="pnlMassOfOil.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1059, 54</value>
+  </data>
+  <data name="pnlMassOfOil.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pnlMassOfOil.Name" xml:space="preserve">
+    <value>pnlMassOfOil</value>
+  </data>
+  <data name="&gt;&gt;pnlMassOfOil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMassOfOil.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMassOfOil.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnlDeliveryReceiptLoading.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;txtConsigner.Name" xml:space="preserve">
+    <value>txtConsigner</value>
+  </data>
+  <data name="&gt;&gt;txtConsigner.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtConsigner.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;txtConsigner.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblConsigner.Name" xml:space="preserve">
+    <value>lblConsigner</value>
+  </data>
+  <data name="&gt;&gt;lblConsigner.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblConsigner.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;lblConsigner.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtShipperLoading.Name" xml:space="preserve">
+    <value>txtShipperLoading</value>
+  </data>
+  <data name="&gt;&gt;txtShipperLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtShipperLoading.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;txtShipperLoading.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblShipperLoading.Name" xml:space="preserve">
+    <value>lblShipperLoading</value>
+  </data>
+  <data name="&gt;&gt;lblShipperLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblShipperLoading.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;lblShipperLoading.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtAgentLoading.Name" xml:space="preserve">
+    <value>txtAgentLoading</value>
+  </data>
+  <data name="&gt;&gt;txtAgentLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAgentLoading.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;txtAgentLoading.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblAgentLoading.Name" xml:space="preserve">
+    <value>lblAgentLoading</value>
+  </data>
+  <data name="&gt;&gt;lblAgentLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAgentLoading.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;lblAgentLoading.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlDeliveryReceiptLoading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 382</value>
+  </data>
+  <data name="pnlDeliveryReceiptLoading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1060, 54</value>
+  </data>
+  <data name="pnlDeliveryReceiptLoading.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnlDeliveryReceiptLoading.Name" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;pnlDeliveryReceiptLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlDeliveryReceiptLoading.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlDeliveryReceiptLoading.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtConsigner.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="txtConsigner.Location" type="System.Drawing.Point, System.Drawing">
+    <value>849, 3</value>
+  </data>
+  <data name="txtConsigner.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="txtConsigner.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 20</value>
+  </data>
+  <data name="txtConsigner.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtConsigner.Name" xml:space="preserve">
+    <value>txtConsigner</value>
+  </data>
+  <data name="&gt;&gt;txtConsigner.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtConsigner.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;txtConsigner.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblConsigner.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblConsigner.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblConsigner.Location" type="System.Drawing.Point, System.Drawing">
+    <value>743, 6</value>
+  </data>
+  <data name="lblConsigner.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblConsigner.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblConsigner.Text" xml:space="preserve">
+    <value>Consigner</value>
+  </data>
+  <data name="lblConsigner.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblConsigner.Name" xml:space="preserve">
+    <value>lblConsigner</value>
+  </data>
+  <data name="&gt;&gt;lblConsigner.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblConsigner.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;lblConsigner.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtShipperLoading.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="txtShipperLoading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 3</value>
+  </data>
+  <data name="txtShipperLoading.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="txtShipperLoading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 20</value>
+  </data>
+  <data name="txtShipperLoading.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtShipperLoading.Name" xml:space="preserve">
+    <value>txtShipperLoading</value>
+  </data>
+  <data name="&gt;&gt;txtShipperLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtShipperLoading.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;txtShipperLoading.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblShipperLoading.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblShipperLoading.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblShipperLoading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 6</value>
+  </data>
+  <data name="lblShipperLoading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblShipperLoading.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblShipperLoading.Text" xml:space="preserve">
+    <value>Shipper</value>
+  </data>
+  <data name="lblShipperLoading.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblShipperLoading.Name" xml:space="preserve">
+    <value>lblShipperLoading</value>
+  </data>
+  <data name="&gt;&gt;lblShipperLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblShipperLoading.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;lblShipperLoading.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtAgentLoading.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtAgentLoading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 3</value>
+  </data>
+  <data name="txtAgentLoading.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="txtAgentLoading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 20</value>
+  </data>
+  <data name="txtAgentLoading.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtAgentLoading.Name" xml:space="preserve">
+    <value>txtAgentLoading</value>
+  </data>
+  <data name="&gt;&gt;txtAgentLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAgentLoading.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;txtAgentLoading.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblAgentLoading.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAgentLoading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 6</value>
+  </data>
+  <data name="lblAgentLoading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblAgentLoading.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblAgentLoading.Text" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="lblAgentLoading.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblAgentLoading.Name" xml:space="preserve">
+    <value>lblAgentLoading</value>
+  </data>
+  <data name="&gt;&gt;lblAgentLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAgentLoading.Parent" xml:space="preserve">
+    <value>pnlDeliveryReceiptLoading</value>
+  </data>
+  <data name="&gt;&gt;lblAgentLoading.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlDeliverReceiptDestination.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;txtConsignee.Name" xml:space="preserve">
+    <value>txtConsignee</value>
+  </data>
+  <data name="&gt;&gt;txtConsignee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtConsignee.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;txtConsignee.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblConsignee.Name" xml:space="preserve">
+    <value>lblConsignee</value>
+  </data>
+  <data name="&gt;&gt;lblConsignee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblConsignee.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;lblConsignee.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtShipperDestination.Name" xml:space="preserve">
+    <value>txtShipperDestination</value>
+  </data>
+  <data name="&gt;&gt;txtShipperDestination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtShipperDestination.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;txtShipperDestination.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblShipperDestination.Name" xml:space="preserve">
+    <value>lblShipperDestination</value>
+  </data>
+  <data name="&gt;&gt;lblShipperDestination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblShipperDestination.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;lblShipperDestination.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtAgentDestination.Name" xml:space="preserve">
+    <value>txtAgentDestination</value>
+  </data>
+  <data name="&gt;&gt;txtAgentDestination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAgentDestination.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;txtAgentDestination.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblAgentDestination.Name" xml:space="preserve">
+    <value>lblAgentDestination</value>
+  </data>
+  <data name="&gt;&gt;lblAgentDestination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAgentDestination.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;lblAgentDestination.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlDeliverReceiptDestination.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 382</value>
+  </data>
+  <data name="pnlDeliverReceiptDestination.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1060, 54</value>
+  </data>
+  <data name="pnlDeliverReceiptDestination.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pnlDeliverReceiptDestination.Name" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;pnlDeliverReceiptDestination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlDeliverReceiptDestination.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlDeliverReceiptDestination.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtConsignee.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="txtConsignee.Location" type="System.Drawing.Point, System.Drawing">
+    <value>849, 3</value>
+  </data>
+  <data name="txtConsignee.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="txtConsignee.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 20</value>
+  </data>
+  <data name="txtConsignee.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtConsignee.Name" xml:space="preserve">
+    <value>txtConsignee</value>
+  </data>
+  <data name="&gt;&gt;txtConsignee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtConsignee.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;txtConsignee.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblConsignee.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblConsignee.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblConsignee.Location" type="System.Drawing.Point, System.Drawing">
+    <value>743, 6</value>
+  </data>
+  <data name="lblConsignee.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblConsignee.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblConsignee.Text" xml:space="preserve">
+    <value>Consignee</value>
+  </data>
+  <data name="lblConsignee.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblConsignee.Name" xml:space="preserve">
+    <value>lblConsignee</value>
+  </data>
+  <data name="&gt;&gt;lblConsignee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblConsignee.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;lblConsignee.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtShipperDestination.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="txtShipperDestination.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 3</value>
+  </data>
+  <data name="txtShipperDestination.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="txtShipperDestination.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 20</value>
+  </data>
+  <data name="txtShipperDestination.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtShipperDestination.Name" xml:space="preserve">
+    <value>txtShipperDestination</value>
+  </data>
+  <data name="&gt;&gt;txtShipperDestination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtShipperDestination.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;txtShipperDestination.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblShipperDestination.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblShipperDestination.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblShipperDestination.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 6</value>
+  </data>
+  <data name="lblShipperDestination.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblShipperDestination.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblShipperDestination.Text" xml:space="preserve">
+    <value>Shipper</value>
+  </data>
+  <data name="lblShipperDestination.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblShipperDestination.Name" xml:space="preserve">
+    <value>lblShipperDestination</value>
+  </data>
+  <data name="&gt;&gt;lblShipperDestination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblShipperDestination.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;lblShipperDestination.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtAgentDestination.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtAgentDestination.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 3</value>
+  </data>
+  <data name="txtAgentDestination.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="txtAgentDestination.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 20</value>
+  </data>
+  <data name="txtAgentDestination.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtAgentDestination.Name" xml:space="preserve">
+    <value>txtAgentDestination</value>
+  </data>
+  <data name="&gt;&gt;txtAgentDestination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAgentDestination.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;txtAgentDestination.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblAgentDestination.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAgentDestination.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 6</value>
+  </data>
+  <data name="lblAgentDestination.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblAgentDestination.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblAgentDestination.Text" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="lblAgentDestination.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblAgentDestination.Name" xml:space="preserve">
+    <value>lblAgentDestination</value>
+  </data>
+  <data name="&gt;&gt;lblAgentDestination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAgentDestination.Parent" xml:space="preserve">
+    <value>pnlDeliverReceiptDestination</value>
+  </data>
+  <data name="&gt;&gt;lblAgentDestination.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="grid.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="grid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 74</value>
+  </data>
+  <data name="grid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1059, 258</value>
+  </data>
+  <data name="grid.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;grid.Name" xml:space="preserve">
+    <value>grid</value>
+  </data>
+  <data name="&gt;&gt;grid.Type" xml:space="preserve">
+    <value>ShippingMeasure.Controls.MeasureGrid, ShippingMeasure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;grid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grid.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="summary.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="summary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 338</value>
+  </data>
+  <data name="summary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1059, 38</value>
+  </data>
+  <data name="summary.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;summary.Name" xml:space="preserve">
+    <value>summary</value>
+  </data>
+  <data name="&gt;&gt;summary.Type" xml:space="preserve">
+    <value>ShippingMeasure.Controls.MeasureGridSummary, ShippingMeasure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;summary.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;summary.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="header.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="header.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="header.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>964, 54</value>
+  </data>
+  <data name="header.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1059, 54</value>
+  </data>
+  <data name="header.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;header.Name" xml:space="preserve">
+    <value>header</value>
+  </data>
+  <data name="&gt;&gt;header.Type" xml:space="preserve">
+    <value>ShippingMeasure.Controls.MeasureHeader, ShippingMeasure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;header.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;header.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1084, 461</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 39</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Receipt</value>
+  </data>
+  <data name="&gt;&gt;menuTools.Name" xml:space="preserve">
+    <value>menuTools</value>
+  </data>
+  <data name="&gt;&gt;menuTools.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuNew.Name" xml:space="preserve">
+    <value>menuNew</value>
+  </data>
+  <data name="&gt;&gt;menuNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuLoad.Name" xml:space="preserve">
+    <value>menuLoad</value>
+  </data>
+  <data name="&gt;&gt;menuLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuSave.Name" xml:space="preserve">
+    <value>menuSave</value>
+  </data>
+  <data name="&gt;&gt;menuSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuPrint.Name" xml:space="preserve">
+    <value>menuPrint</value>
+  </data>
+  <data name="&gt;&gt;menuPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuVolumeByHeight.Name" xml:space="preserve">
+    <value>menuVolumeByHeight</value>
+  </data>
+  <data name="&gt;&gt;menuVolumeByHeight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuVolumeByUllage.Name" xml:space="preserve">
+    <value>menuVolumeByUllage</value>
+  </data>
+  <data name="&gt;&gt;menuVolumeByUllage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
+    <value>toolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuAutoCalculate.Name" xml:space="preserve">
+    <value>menuAutoCalculate</value>
+  </data>
+  <data name="&gt;&gt;menuAutoCalculate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuCalculate.Name" xml:space="preserve">
+    <value>menuCalculate</value>
+  </data>
+  <data name="&gt;&gt;menuCalculate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.Name" xml:space="preserve">
+    <value>lblStatus</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ReceiptForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

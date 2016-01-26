@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BuiltInKindChemicalProduct" xml:space="preserve">
+    <value>化工产品</value>
+  </data>
+  <data name="BuiltInKindCrudeOil" xml:space="preserve">
+    <value>原油</value>
+  </data>
+  <data name="BuiltInKindCustomized" xml:space="preserve">
+    <value>[自定义]</value>
+  </data>
+  <data name="BuiltInKindCustomizedAdd" xml:space="preserve">
+    <value>[新增]</value>
+  </data>
+  <data name="BuiltInKindDiesel" xml:space="preserve">
+    <value>柴油</value>
+  </data>
+  <data name="BuiltInKindLubricant" xml:space="preserve">
+    <value>润滑油</value>
+  </data>
+  <data name="BuiltInKindPetrol" xml:space="preserve">
+    <value>汽油</value>
+  </data>
+  <data name="BuiltInKindPetroleumProducts" xml:space="preserve">
+    <value>[石油产品]</value>
+  </data>
+  <data name="HeaderDensityMeasured" xml:space="preserve">
+    <value>视密度
+(kg/m³)</value>
+  </data>
+  <data name="HeaderDensityOfStandard" xml:space="preserve">
+    <value>标准密度
+(kg/m³)</value>
+  </data>
+  <data name="HeaderHeight" xml:space="preserve">
+    <value>测深
+(m)</value>
+  </data>
+  <data name="HeaderHeightOfWater" xml:space="preserve">
+    <value>水高
+(m)</value>
+  </data>
+  <data name="HeaderMass" xml:space="preserve">
+    <value>净液货质量
+(t)</value>
+  </data>
+  <data name="HeaderTankName" xml:space="preserve">
+    <value>舱名</value>
+  </data>
+  <data name="HeaderTemperatureMeasured" xml:space="preserve">
+    <value>视温度
+(°C)</value>
+  </data>
+  <data name="HeaderTemperatureOfTank" xml:space="preserve">
+    <value>舱温
+(°C)</value>
+  </data>
+  <data name="HeaderUllage" xml:space="preserve">
+    <value>空高
+(m)</value>
+  </data>
+  <data name="HeaderVcf20" xml:space="preserve">
+    <value>VCF20</value>
+  </data>
+  <data name="HeaderVolume" xml:space="preserve">
+    <value>净液货表体积
+(m³)</value>
+  </data>
+  <data name="HeaderVolumeOfStandard" xml:space="preserve">
+    <value>标准净液货体积
+(m³)</value>
+  </data>
+  <data name="HeaderVolumeOfWater" xml:space="preserve">
+    <value>水体积
+(m³)</value>
+  </data>
+  <data name="LabelReceiptFor" xml:space="preserve">
+    <value>装运/卸货</value>
+  </data>
+  <data name="LabelTime" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="LabelTotalOfMass" xml:space="preserve">
+    <value>净液货总质量(t)</value>
+  </data>
+  <data name="LabelTotalOfVolume" xml:space="preserve">
+    <value>净液货表总体积(m³)</value>
+  </data>
+  <data name="LabelTotalOfVolumeOfStandard" xml:space="preserve">
+    <value>标准净液货总体积(m³)</value>
+  </data>
+  <data name="LabelTotaVlOfolumeOfWater" xml:space="preserve">
+    <value>水总体积(m³)</value>
+  </data>
+  <data name="MenuVolumeByHeight" xml:space="preserve">
+    <value>按照测深计算</value>
+  </data>
+  <data name="MenuVolumeByUllage" xml:space="preserve">
+    <value>按照空高计算</value>
+  </data>
+  <data name="MsgCalcErrorFinish" xml:space="preserve">
+    <value>计算失败：{0}</value>
+  </data>
+  <data name="MsgCalcFinish" xml:space="preserve">
+    <value>计算完成</value>
+  </data>
+  <data name="MsgCalcInfoDensityOfStandard" xml:space="preserve">
+    <value>正在计算标准密度，船舱：{0}</value>
+  </data>
+  <data name="MsgCalcInfoMass" xml:space="preserve">
+    <value>正在计算净液货质量，船舱：{0}</value>
+  </data>
+  <data name="MsgCalcInfoTotalOfMass" xml:space="preserve">
+    <value>正在计算净液货总质量</value>
+  </data>
+  <data name="MsgCalcInfoTotalOfVolume" xml:space="preserve">
+    <value>正在计算净液货表总体积</value>
+  </data>
+  <data name="MsgCalcInfoTotalOfVolumeOfStandard" xml:space="preserve">
+    <value>正在计算标准净液货总体积</value>
+  </data>
+  <data name="MsgCalcInfoTotalOfVolumeOfWater" xml:space="preserve">
+    <value>正在计算水体积</value>
+  </data>
+  <data name="MsgCalcInfoVcf" xml:space="preserve">
+    <value>正在计算VCF，船舱：{0}</value>
+  </data>
+  <data name="MsgCalcInfoVolume" xml:space="preserve">
+    <value>正在计算净液货表体积，船舱：{0}</value>
+  </data>
+  <data name="MsgCalcInfoVolumeOfStandard" xml:space="preserve">
+    <value>正在计算标准净液货体积，船舱：{0}</value>
+  </data>
+  <data name="MsgCalcInfoVolumeOfWater" xml:space="preserve">
+    <value>正在计算水体积，船舱：{0}</value>
+  </data>
+  <data name="MsgCellErrorDensityMeasured" xml:space="preserve">
+    <value>请输入视密度</value>
+  </data>
+  <data name="MsgCellErrorDensityOfStandard" xml:space="preserve">
+    <value>请输入标准密度</value>
+  </data>
+  <data name="MsgCellErrorHeight" xml:space="preserve">
+    <value>请输入测深</value>
+  </data>
+  <data name="MsgCellErrorHeightOfWater" xml:space="preserve">
+    <value>请输入水高</value>
+  </data>
+  <data name="MsgCellErrorMass" xml:space="preserve">
+    <value>请输入净液货质量</value>
+  </data>
+  <data name="MsgCellErrorTemperatureMeasured" xml:space="preserve">
+    <value>请输入视温度</value>
+  </data>
+  <data name="MsgCellErrorTemperatureOfTank" xml:space="preserve">
+    <value>请输入舱温</value>
+  </data>
+  <data name="MsgCellErrorTotalOfMass" xml:space="preserve">
+    <value>请输入净液货总质量</value>
+  </data>
+  <data name="MsgCellErrorTotalOfVolume" xml:space="preserve">
+    <value>请输入净液货总体积</value>
+  </data>
+  <data name="MsgCellErrorTotalOfVolumeOfStandard" xml:space="preserve">
+    <value>请输入标准净液货总体积</value>
+  </data>
+  <data name="MsgCellErrorTotalOfVolumeOfWater" xml:space="preserve">
+    <value>请输入水体积</value>
+  </data>
+  <data name="MsgCellErrorVcf" xml:space="preserve">
+    <value>请输入VCF</value>
+  </data>
+  <data name="MsgCellErrorVolume" xml:space="preserve">
+    <value>请输入净液货表体积</value>
+  </data>
+  <data name="MsgCellErrorVolumeOfStandard" xml:space="preserve">
+    <value>请输入标准净液货表体积</value>
+  </data>
+  <data name="MsgCellErrorVolumeOfWater" xml:space="preserve">
+    <value>请输入水体积</value>
+  </data>
+  <data name="MsgConfirmation" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="MsgError" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="MsgErrorChangePasswordFailed" xml:space="preserve">
+    <value>更改密码失败
+
+{0}</value>
+  </data>
+  <data name="MsgErrorConfigIssue" xml:space="preserve">
+    <value>本软件配置出现问题，请与国家船舶舱大容积计量站联系。联系电话: 021-64035681。E-MAIL: metrol@sdari.com.cn</value>
+  </data>
+  <data name="MsgErrorInvalidPassword" xml:space="preserve">
+    <value>无效密码</value>
+  </data>
+  <data name="MsgErrorOldPasswordNotMatch" xml:space="preserve">
+    <value>旧密码不正确，登录失败</value>
+  </data>
+  <data name="MsgErrorPasswordNotSame" xml:space="preserve">
+    <value>确认密码和新密码不相同</value>
+  </data>
+  <data name="MsgErrorSoftwareExpired" xml:space="preserve">
+    <value>本软件使用期限已过，请与国家船舶舱大容积计量站联系。联系电话: 021-64035681。E-MAIL: metrol@sdari.com.cn</value>
+  </data>
+  <data name="MsgLanguageChangedPleaseRestart" xml:space="preserve">
+    <value>语言已更改，请重新打开应用</value>
+  </data>
+  <data name="MsgRemoveKindOfGoodsFailed" xml:space="preserve">
+    <value>删除失败</value>
+  </data>
+  <data name="MsgSaveKindOfGoodsFailed" xml:space="preserve">
+    <value>保存失败</value>
+  </data>
+  <data name="MsgValidationErrorAftDraft" xml:space="preserve">
+    <value>请输入艉吃水</value>
+  </data>
+  <data name="MsgValidationErrorCannotBeEmpty" xml:space="preserve">
+    <value>{0}: 不能为空</value>
+  </data>
+  <data name="MsgValidationErrorDensityMeasured" xml:space="preserve">
+    <value>{0} - 视密度</value>
+  </data>
+  <data name="MsgValidationErrorDensityOfStandard" xml:space="preserve">
+    <value>{0} - 标准密度</value>
+  </data>
+  <data name="MsgValidationErrorForeDraft" xml:space="preserve">
+    <value>请输入艏吃水</value>
+  </data>
+  <data name="MsgValidationErrorHeight" xml:space="preserve">
+    <value>{0} - 测深</value>
+  </data>
+  <data name="MsgValidationErrorHeightOfWater" xml:space="preserve">
+    <value>{0} - 水高</value>
+  </data>
+  <data name="MsgValidationErrorInvalidVesselStatus" xml:space="preserve">
+    <value>{0}: 无效的船舶状态</value>
+  </data>
+  <data name="MsgValidationErrorKindOfGoods" xml:space="preserve">
+    <value>请选择货品</value>
+  </data>
+  <data name="MsgValidationErrorListToPortStarboard" xml:space="preserve">
+    <value>请输入船舶状态</value>
+  </data>
+  <data name="MsgValidationErrorLoadDischarge" xml:space="preserve">
+    <value>请选择装运/卸货</value>
+  </data>
+  <data name="MsgValidationErrorMass" xml:space="preserve">
+    <value>{0} - 净液货质量</value>
+  </data>
+  <data name="MsgValidationErrorPortOfDestination" xml:space="preserve">
+    <value>请输入卸货港</value>
+  </data>
+  <data name="MsgValidationErrorPortOfShipment" xml:space="preserve">
+    <value>请输入装运港</value>
+  </data>
+  <data name="MsgValidationErrorReceiptNo" xml:space="preserve">
+    <value>请输入单号</value>
+  </data>
+  <data name="MsgValidationErrorTemperatureMeasured" xml:space="preserve">
+    <value>{0} - 视温度</value>
+  </data>
+  <data name="MsgValidationErrorTemperatureOfTank" xml:space="preserve">
+    <value>{0} - 舱温</value>
+  </data>
+  <data name="MsgValidationErrorTrim" xml:space="preserve">
+    <value>请输入纵倾</value>
+  </data>
+  <data name="MsgValidationErrorVcf20" xml:space="preserve">
+    <value>{0} - VCF</value>
+  </data>
+  <data name="MsgValidationErrorVesselName" xml:space="preserve">
+    <value>请输入船名</value>
+  </data>
+  <data name="MsgValidationErrorVesselStatus" xml:space="preserve">
+    <value>请输入船舶状态</value>
+  </data>
+  <data name="MsgValidationErrorVolume" xml:space="preserve">
+    <value>{0} - 净液货表体积</value>
+  </data>
+  <data name="MsgValidationErrorVolumeOfStandard" xml:space="preserve">
+    <value>{0} - 标准净液货体积</value>
+  </data>
+  <data name="MsgValidationErrorVolumeOfWater" xml:space="preserve">
+    <value>{0} - 水体积</value>
+  </data>
+  <data name="MsgWarn" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="MsgWarnSoftwareExpiration" xml:space="preserve">
+    <value>本软件将于{0}到期，请速与国家船舶舱大容积计量站联系。联系电话: 021-64035681。E-MAIL: metrol@sdari.com.cn</value>
+  </data>
+  <data name="ReportLabelListToPort" xml:space="preserve">
+    <value>左倾</value>
+  </data>
+  <data name="ReportLabelListToStarboard" xml:space="preserve">
+    <value>右倾</value>
+  </data>
+  <data name="ReportLabelReceiptForDischarge" xml:space="preserve">
+    <value>○装运/●卸货港</value>
+  </data>
+  <data name="ReportLabelReceiptForLoad" xml:space="preserve">
+    <value>●装运/○卸货港</value>
+  </data>
+  <data name="ReportLabelUnitDegree" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="ReportLabelUnitMetre" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="FormTitleDeliveryReceiptDestination" xml:space="preserve">
+    <value>油轮装货（目的港）测量记录</value>
+  </data>
+  <data name="FormTitleDeliveryReceiptLoading" xml:space="preserve">
+    <value>油轮装货（起运港）测量记录</value>
+  </data>
+  <data name="FormTitleLoad" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="FormTitleMassOfOil" xml:space="preserve">
+    <value>油品质量查询</value>
+  </data>
+  <data name="FormTitleSave" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="MsgConfirmationDiscardToLoad" xml:space="preserve">
+    <value>您的修改尚未保存。
+
+点击“确定”放弃修改，并打开。
+否则请点击“取消”。</value>
+  </data>
+  <data name="MsgConfirmationDiscardToNew" xml:space="preserve">
+    <value>您的修改尚未保存。
+
+点击“确定”放弃修改，并新建。
+否则请点击“取消”。</value>
+  </data>
+  <data name="MsgErrorFailToVerifyUserLogin" xml:space="preserve">
+    <value>验证用户登录时出错
+
+{0}</value>
+  </data>
+  <data name="MsgErrorIncorrectUserAndPassword" xml:space="preserve">
+    <value>用户名/密码错误</value>
+  </data>
+  <data name="MsgErrorPrintFailedWithError" xml:space="preserve">
+    <value>打印失败
+{0}</value>
+  </data>
+  <data name="MsgErrorSaveFailedWithError" xml:space="preserve">
+    <value>保存失败
+
+{0}</value>
+  </data>
+  <data name="MsgErrorSelectReceiptToLoad" xml:space="preserve">
+    <value>请选择需要打开的单据</value>
+  </data>
+  <data name="MsgErrorValidationFailedToSave" xml:space="preserve">
+    <value>输入有误
+
+{0}
+
+仍然保存吗? (点击“确定”进行保存)</value>
+  </data>
+  <data name="MsgStatusChangedAndNotSaved" xml:space="preserve">
+    <value>已修改，未保存</value>
+  </data>
+  <data name="MsgStatusNotSave" xml:space="preserve">
+    <value>未保存</value>
+  </data>
+  <data name="MsgStatusReceiptLoaded" xml:space="preserve">
+    <value>单据已打开</value>
+  </data>
+  <data name="MsgStatusSaveFailed" xml:space="preserve">
+    <value>保存失败</value>
+  </data>
+  <data name="MsgStatusSaveSucceeded" xml:space="preserve">
+    <value>保存成功</value>
+  </data>
+  <data name="MsgErrorReceiptNoUsedByOtherReceiptType" xml:space="preserve">
+    <value>该单号 "{0}" 已被其它单据使用。
+正在使用该单号的单据是 {1}。
+
+请使另一个单号。</value>
+  </data>
+  <data name="MsgWarnExistingReceipt" xml:space="preserve">
+    <value>该单号 "{0}" 已经存在，
+如果仍然保存，会改写现有的单据。
+
+点击“确定”改写现有的单据，否则点击“取消”。</value>
+  </data>
+  <data name="ReceiptTypeNameDeliveryReceiptDestination" xml:space="preserve">
+    <value>油轮装货（目的港）测量记录</value>
+  </data>
+  <data name="ReceiptTypeNameDeliveryReceiptLoading" xml:space="preserve">
+    <value>油轮装货（起运港）测量记录</value>
+  </data>
+  <data name="ReceiptTypeNameMassOfOil" xml:space="preserve">
+    <value>油品质量查询</value>
+  </data>
+</root>

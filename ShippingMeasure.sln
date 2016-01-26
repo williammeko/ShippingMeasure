@@ -1,0 +1,111 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingMeasure", "ShippingMeasure\ShippingMeasure.csproj", "{4C144A88-63AA-43B5-9DBD-44A1CC3E29EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62E7515D-ADD9-457B-9252-1DE5FF226CAD}"
+	ProjectSection(SolutionItems) = preProject
+		backlog.txt = backlog.txt
+		Data.mdb = Data.mdb
+		Deploy.ps1 = Deploy.ps1
+		readme.txt = readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingMeasure.Common", "ShippingMeasure.Common\ShippingMeasure.Common.csproj", "{4A221252-A968-4743-865F-40D3A40C5533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingMeasure.DataConverting", "ShippingMeasure.DataConverting\ShippingMeasure.DataConverting.csproj", "{C5CC4669-07F5-4543-83C8-5BFFAC71BB95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingMeasure.Db", "ShippingMeasure.Db\ShippingMeasure.Db.csproj", "{866A9649-2BD0-4A92-A2FE-16D4471A4107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingMeasure.Core", "ShippingMeasure.Core\ShippingMeasure.Core.csproj", "{F7F10083-548A-42A1-9D60-4767A4AB5CA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingMeasure.Db.Tests", "ShippingMeasure.Db.Tests\ShippingMeasure.Db.Tests.csproj", "{B32BFC4D-3CC9-43B6-95BA-78BF7EC208AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropDownControls", "DropDownControls\DropDownControls.csproj", "{1A0EB623-3EDD-4BA6-80EE-0FA61A708542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingMeasure.Core.Tests", "ShippingMeasure.Core.Tests\ShippingMeasure.Core.Tests.csproj", "{04F954B5-EF3D-4B3C-B487-244DCD03E4F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingMeasure.Common.Tests", "ShippingMeasure.Common.Tests\ShippingMeasure.Common.Tests.csproj", "{9C449533-6F6B-4DCF-85CB-125BECDE4F5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C144A88-63AA-43B5-9DBD-44A1CC3E29EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C144A88-63AA-43B5-9DBD-44A1CC3E29EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C144A88-63AA-43B5-9DBD-44A1CC3E29EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C144A88-63AA-43B5-9DBD-44A1CC3E29EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A221252-A968-4743-865F-40D3A40C5533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A221252-A968-4743-865F-40D3A40C5533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A221252-A968-4743-865F-40D3A40C5533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A221252-A968-4743-865F-40D3A40C5533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5CC4669-07F5-4543-83C8-5BFFAC71BB95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CC4669-07F5-4543-83C8-5BFFAC71BB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CC4669-07F5-4543-83C8-5BFFAC71BB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CC4669-07F5-4543-83C8-5BFFAC71BB95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866A9649-2BD0-4A92-A2FE-16D4471A4107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866A9649-2BD0-4A92-A2FE-16D4471A4107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866A9649-2BD0-4A92-A2FE-16D4471A4107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866A9649-2BD0-4A92-A2FE-16D4471A4107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F10083-548A-42A1-9D60-4767A4AB5CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F10083-548A-42A1-9D60-4767A4AB5CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F10083-548A-42A1-9D60-4767A4AB5CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F10083-548A-42A1-9D60-4767A4AB5CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32BFC4D-3CC9-43B6-95BA-78BF7EC208AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32BFC4D-3CC9-43B6-95BA-78BF7EC208AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32BFC4D-3CC9-43B6-95BA-78BF7EC208AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32BFC4D-3CC9-43B6-95BA-78BF7EC208AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A0EB623-3EDD-4BA6-80EE-0FA61A708542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0EB623-3EDD-4BA6-80EE-0FA61A708542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0EB623-3EDD-4BA6-80EE-0FA61A708542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0EB623-3EDD-4BA6-80EE-0FA61A708542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F954B5-EF3D-4B3C-B487-244DCD03E4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F954B5-EF3D-4B3C-B487-244DCD03E4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F954B5-EF3D-4B3C-B487-244DCD03E4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F954B5-EF3D-4B3C-B487-244DCD03E4F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C449533-6F6B-4DCF-85CB-125BECDE4F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C449533-6F6B-4DCF-85CB-125BECDE4F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C449533-6F6B-4DCF-85CB-125BECDE4F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C449533-6F6B-4DCF-85CB-125BECDE4F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://williammeko.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ShippingMeasure\\ShippingMeasure.csproj
+		SccProjectName1 = ShippingMeasure
+		SccLocalPath1 = ShippingMeasure
+		SccProjectUniqueName2 = ShippingMeasure.Common\\ShippingMeasure.Common.csproj
+		SccProjectName2 = ShippingMeasure.Common
+		SccLocalPath2 = ShippingMeasure.Common
+		SccProjectUniqueName3 = ShippingMeasure.DataConverting\\ShippingMeasure.DataConverting.csproj
+		SccProjectName3 = ShippingMeasure.DataConverting
+		SccLocalPath3 = ShippingMeasure.DataConverting
+		SccProjectUniqueName4 = ShippingMeasure.Db\\ShippingMeasure.Db.csproj
+		SccProjectName4 = ShippingMeasure.Db
+		SccLocalPath4 = ShippingMeasure.Db
+		SccProjectUniqueName5 = ShippingMeasure.Core\\ShippingMeasure.Core.csproj
+		SccProjectName5 = ShippingMeasure.Core
+		SccLocalPath5 = ShippingMeasure.Core
+		SccProjectUniqueName6 = ShippingMeasure.Db.Tests\\ShippingMeasure.Db.Tests.csproj
+		SccProjectName6 = ShippingMeasure.Db.Tests
+		SccLocalPath6 = ShippingMeasure.Db.Tests
+		SccProjectUniqueName7 = DropDownControls\\DropDownControls.csproj
+		SccProjectName7 = DropDownControls
+		SccLocalPath7 = DropDownControls
+		SccProjectUniqueName8 = ShippingMeasure.Core.Tests\\ShippingMeasure.Core.Tests.csproj
+		SccProjectName8 = ShippingMeasure.Core.Tests
+		SccLocalPath8 = ShippingMeasure.Core.Tests
+		SccProjectUniqueName9 = ShippingMeasure.Common.Tests\\ShippingMeasure.Common.Tests.csproj
+		SccProjectName9 = ShippingMeasure.Common.Tests
+		SccLocalPath9 = ShippingMeasure.Common.Tests
+	EndGlobalSection
+EndGlobal

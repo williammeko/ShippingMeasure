@@ -1,0 +1,16 @@
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\ShippingMeasure.DataConverting.exe
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\ShippingMeasure.DataConverting.pdb
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\ShippingMeasure.Common.dll
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\ShippingMeasure.Core.dll
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\ShippingMeasure.Db.dll
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\ShippingMeasure.Common.pdb
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\ShippingMeasure.Core.pdb
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\ShippingMeasure.Db.pdb
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\zh-Hans\ShippingMeasure.Core.resources.dll
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\obj\Debug\ShippingMeasure.DataConverting.csprojResolveAssemblyReference.cache
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\obj\Debug\ShippingMeasure.DataConverting.TankCapacityImportingForm.resources
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\obj\Debug\ShippingMeasure.DataConverting.Properties.Resources.resources
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\obj\Debug\ShippingMeasure.DataConverting.csproj.GenerateResource.Cache
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\obj\Debug\ShippingMeasure.DataConverting.exe
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\obj\Debug\ShippingMeasure.DataConverting.pdb
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.DataConverting\bin\Debug\zh-Hans\ShippingMeasure.Common.resources.dll

@@ -1,0 +1,11 @@
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\obj\Debug\ShippingMeasure.Db.csprojResolveAssemblyReference.cache
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Db.dll
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Db.pdb
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Common.dll
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Core.dll
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Common.pdb
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Core.pdb
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\zh-Hans\ShippingMeasure.Core.resources.dll
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\obj\Debug\ShippingMeasure.Db.dll
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\obj\Debug\ShippingMeasure.Db.pdb
+D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\zh-Hans\ShippingMeasure.Common.resources.dll

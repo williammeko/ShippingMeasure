@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BuiltInKindChemicalProduct" xml:space="preserve">
+    <value>Chemical product</value>
+  </data>
+  <data name="BuiltInKindCrudeOil" xml:space="preserve">
+    <value>Crude oil</value>
+  </data>
+  <data name="BuiltInKindCustomized" xml:space="preserve">
+    <value>[Custom]</value>
+  </data>
+  <data name="BuiltInKindCustomizedAdd" xml:space="preserve">
+    <value>[Add new]</value>
+  </data>
+  <data name="BuiltInKindDiesel" xml:space="preserve">
+    <value>Diesel</value>
+  </data>
+  <data name="BuiltInKindLubricant" xml:space="preserve">
+    <value>Lubricant</value>
+  </data>
+  <data name="BuiltInKindPetrol" xml:space="preserve">
+    <value>Petrol</value>
+  </data>
+  <data name="BuiltInKindPetroleumProducts" xml:space="preserve">
+    <value>[Petroleum products]</value>
+  </data>
+  <data name="HeaderDensityMeasured" xml:space="preserve">
+    <value>Density measured
+(kg/m³)</value>
+  </data>
+  <data name="HeaderDensityOfStandard" xml:space="preserve">
+    <value>Standard density
+(kg/m³)</value>
+  </data>
+  <data name="HeaderHeight" xml:space="preserve">
+    <value>Height
+(m)</value>
+  </data>
+  <data name="HeaderHeightOfWater" xml:space="preserve">
+    <value>Water height
+(m)</value>
+  </data>
+  <data name="HeaderMass" xml:space="preserve">
+    <value>Mass
+(t)</value>
+  </data>
+  <data name="HeaderTankName" xml:space="preserve">
+    <value>Tank name</value>
+  </data>
+  <data name="HeaderTemperatureMeasured" xml:space="preserve">
+    <value>Temp. measured
+(°C)</value>
+  </data>
+  <data name="HeaderTemperatureOfTank" xml:space="preserve">
+    <value>Tank temp.
+(°C)</value>
+  </data>
+  <data name="HeaderUllage" xml:space="preserve">
+    <value>Ullage
+(m)</value>
+  </data>
+  <data name="HeaderVcf20" xml:space="preserve">
+    <value>VCF20</value>
+  </data>
+  <data name="HeaderVolume" xml:space="preserve">
+    <value>Volume
+(m³)</value>
+  </data>
+  <data name="HeaderVolumeOfStandard" xml:space="preserve">
+    <value>Standard vol.
+(m³)</value>
+  </data>
+  <data name="HeaderVolumeOfWater" xml:space="preserve">
+    <value>Water vol.
+(m³)</value>
+  </data>
+  <data name="LabelReceiptFor" xml:space="preserve">
+    <value>Load/discharge</value>
+  </data>
+  <data name="LabelTime" xml:space="preserve">
+    <value>Receipt date</value>
+  </data>
+  <data name="LabelTotalOfMass" xml:space="preserve">
+    <value>Total mass (t)</value>
+  </data>
+  <data name="LabelTotalOfVolume" xml:space="preserve">
+    <value>Total vol. (m³)</value>
+  </data>
+  <data name="LabelTotalOfVolumeOfStandard" xml:space="preserve">
+    <value>Total standard vol. (m³)</value>
+  </data>
+  <data name="LabelTotaVlOfolumeOfWater" xml:space="preserve">
+    <value>Total water vol. (m³)</value>
+  </data>
+  <data name="MenuVolumeByHeight" xml:space="preserve">
+    <value>Volume by Height
+</value>
+  </data>
+  <data name="MenuVolumeByUllage" xml:space="preserve">
+    <value>Volume by Ullage</value>
+  </data>
+  <data name="MsgCalcErrorFinish" xml:space="preserve">
+    <value>Calculation finished with error: {0}</value>
+  </data>
+  <data name="MsgCalcFinish" xml:space="preserve">
+    <value>Calculation finished</value>
+  </data>
+  <data name="MsgCalcInfoDensityOfStandard" xml:space="preserve">
+    <value>Calculating standard density for tank {0}</value>
+  </data>
+  <data name="MsgCalcInfoMass" xml:space="preserve">
+    <value>Calculating mass for tank {0}</value>
+  </data>
+  <data name="MsgCalcInfoTotalOfMass" xml:space="preserve">
+    <value>Calculating total mass</value>
+  </data>
+  <data name="MsgCalcInfoTotalOfVolume" xml:space="preserve">
+    <value>Calculating total volume</value>
+  </data>
+  <data name="MsgCalcInfoTotalOfVolumeOfStandard" xml:space="preserve">
+    <value>Calculating total standard volume</value>
+  </data>
+  <data name="MsgCalcInfoTotalOfVolumeOfWater" xml:space="preserve">
+    <value>Calculating total water volume</value>
+  </data>
+  <data name="MsgCalcInfoVcf" xml:space="preserve">
+    <value>Calculating VCF for tank {0}</value>
+  </data>
+  <data name="MsgCalcInfoVolume" xml:space="preserve">
+    <value>Calculating volume for tank {0}</value>
+  </data>
+  <data name="MsgCalcInfoVolumeOfStandard" xml:space="preserve">
+    <value>Calculating standard volume for tank {0}</value>
+  </data>
+  <data name="MsgCalcInfoVolumeOfWater" xml:space="preserve">
+    <value>Calculating water volume for tank {0}</value>
+  </data>
+  <data name="MsgCellErrorDensityMeasured" xml:space="preserve">
+    <value>Density measured is required</value>
+  </data>
+  <data name="MsgCellErrorDensityOfStandard" xml:space="preserve">
+    <value>Standard density is required</value>
+  </data>
+  <data name="MsgCellErrorHeight" xml:space="preserve">
+    <value>Height is required</value>
+  </data>
+  <data name="MsgCellErrorHeightOfWater" xml:space="preserve">
+    <value>Water height is required</value>
+  </data>
+  <data name="MsgCellErrorMass" xml:space="preserve">
+    <value>Mass is required</value>
+  </data>
+  <data name="MsgCellErrorTemperatureMeasured" xml:space="preserve">
+    <value>Temperature measured is required</value>
+  </data>
+  <data name="MsgCellErrorTemperatureOfTank" xml:space="preserve">
+    <value>Tank temperature is required</value>
+  </data>
+  <data name="MsgCellErrorTotalOfMass" xml:space="preserve">
+    <value>Mass is required</value>
+  </data>
+  <data name="MsgCellErrorTotalOfVolume" xml:space="preserve">
+    <value>Volume is required</value>
+  </data>
+  <data name="MsgCellErrorTotalOfVolumeOfStandard" xml:space="preserve">
+    <value>Standard volume is required</value>
+  </data>
+  <data name="MsgCellErrorTotalOfVolumeOfWater" xml:space="preserve">
+    <value>Water volume is required</value>
+  </data>
+  <data name="MsgCellErrorVcf" xml:space="preserve">
+    <value>VCF20 is required</value>
+  </data>
+  <data name="MsgCellErrorVolume" xml:space="preserve">
+    <value>Volume is required</value>
+  </data>
+  <data name="MsgCellErrorVolumeOfStandard" xml:space="preserve">
+    <value>Standard volume is required</value>
+  </data>
+  <data name="MsgCellErrorVolumeOfWater" xml:space="preserve">
+    <value>Water volume is required</value>
+  </data>
+  <data name="MsgConfirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="MsgError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="MsgErrorChangePasswordFailed" xml:space="preserve">
+    <value>Error occurred while changing password
+
+{0}</value>
+  </data>
+  <data name="MsgErrorConfigIssue" xml:space="preserve">
+    <value>The application encountered configuration issue. Please call 86-21-64035681 to solve the issue. E-MAIL: metrol@sdari.com.cn</value>
+  </data>
+  <data name="MsgErrorInvalidPassword" xml:space="preserve">
+    <value>Invalid password</value>
+  </data>
+  <data name="MsgErrorOldPasswordNotMatch" xml:space="preserve">
+    <value>Old password not match, login failed</value>
+  </data>
+  <data name="MsgErrorPasswordNotSame" xml:space="preserve">
+    <value>Confirm password need to be same as New password</value>
+  </data>
+  <data name="MsgErrorSoftwareExpired" xml:space="preserve">
+    <value>This software has been expired. For more information, please call 86-21-64035681. E-MAIL: metrol@sdari.com.cn</value>
+  </data>
+  <data name="MsgLanguageChangedPleaseRestart" xml:space="preserve">
+    <value>Language changed, please exit &amp; restart app to take affect</value>
+  </data>
+  <data name="MsgRemoveKindOfGoodsFailed" xml:space="preserve">
+    <value>Remove failed</value>
+  </data>
+  <data name="MsgSaveKindOfGoodsFailed" xml:space="preserve">
+    <value>Save failed</value>
+  </data>
+  <data name="MsgValidationErrorAftDraft" xml:space="preserve">
+    <value>Aft draft is required</value>
+  </data>
+  <data name="MsgValidationErrorCannotBeEmpty" xml:space="preserve">
+    <value>{0}: Cannot be empty</value>
+  </data>
+  <data name="MsgValidationErrorDensityMeasured" xml:space="preserve">
+    <value>{0} - Density measured</value>
+  </data>
+  <data name="MsgValidationErrorDensityOfStandard" xml:space="preserve">
+    <value>{0} - Standard density</value>
+  </data>
+  <data name="MsgValidationErrorForeDraft" xml:space="preserve">
+    <value>Fore draft is requried</value>
+  </data>
+  <data name="MsgValidationErrorHeight" xml:space="preserve">
+    <value>{0} - Height</value>
+  </data>
+  <data name="MsgValidationErrorHeightOfWater" xml:space="preserve">
+    <value>{0} - Height of water</value>
+  </data>
+  <data name="MsgValidationErrorInvalidVesselStatus" xml:space="preserve">
+    <value>{0}: Invalid status value</value>
+  </data>
+  <data name="MsgValidationErrorKindOfGoods" xml:space="preserve">
+    <value>Kind of goods is required</value>
+  </data>
+  <data name="MsgValidationErrorListToPortStarboard" xml:space="preserve">
+    <value>List to Port/Starboard is requried</value>
+  </data>
+  <data name="MsgValidationErrorLoadDischarge" xml:space="preserve">
+    <value>Load/Discharge is required</value>
+  </data>
+  <data name="MsgValidationErrorMass" xml:space="preserve">
+    <value>{0} - Mass</value>
+  </data>
+  <data name="MsgValidationErrorPortOfDestination" xml:space="preserve">
+    <value>Port of Destination is required</value>
+  </data>
+  <data name="MsgValidationErrorPortOfShipment" xml:space="preserve">
+    <value>Port of Shipment is required</value>
+  </data>
+  <data name="MsgValidationErrorReceiptNo" xml:space="preserve">
+    <value>Receipt number is required</value>
+  </data>
+  <data name="MsgValidationErrorTemperatureMeasured" xml:space="preserve">
+    <value>{0} - Temperature meassured</value>
+  </data>
+  <data name="MsgValidationErrorTemperatureOfTank" xml:space="preserve">
+    <value>{0} - Tank temperature</value>
+  </data>
+  <data name="MsgValidationErrorTrim" xml:space="preserve">
+    <value>Trim value is requried</value>
+  </data>
+  <data name="MsgValidationErrorVcf20" xml:space="preserve">
+    <value>{0} - VCF</value>
+  </data>
+  <data name="MsgValidationErrorVesselName" xml:space="preserve">
+    <value>Vessel name is required</value>
+  </data>
+  <data name="MsgValidationErrorVesselStatus" xml:space="preserve">
+    <value>Vessel status value is required</value>
+  </data>
+  <data name="MsgValidationErrorVolume" xml:space="preserve">
+    <value>{0} - Volume</value>
+  </data>
+  <data name="MsgValidationErrorVolumeOfStandard" xml:space="preserve">
+    <value>{0} - Standard volume</value>
+  </data>
+  <data name="MsgValidationErrorVolumeOfWater" xml:space="preserve">
+    <value>{0} - Water volume</value>
+  </data>
+  <data name="MsgWarn" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="MsgWarnSoftwareExpiration" xml:space="preserve">
+    <value>This software will be expired on {0}, please contact the software provider ASAP. Business phone: 86-21-64035681. E-MAIL: metrol@sdari.com.cn</value>
+  </data>
+  <data name="ReportLabelListToPort" xml:space="preserve">
+    <value>List to port</value>
+  </data>
+  <data name="ReportLabelListToStarboard" xml:space="preserve">
+    <value>List to starboard</value>
+  </data>
+  <data name="ReportLabelReceiptForDischarge" xml:space="preserve">
+    <value>●Discharge</value>
+  </data>
+  <data name="ReportLabelReceiptForLoad" xml:space="preserve">
+    <value>●Load</value>
+  </data>
+  <data name="ReportLabelUnitDegree" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="ReportLabelUnitMetre" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="FormTitleDeliveryReceiptDestination" xml:space="preserve">
+    <value>Delivery receipt (destination)</value>
+  </data>
+  <data name="FormTitleDeliveryReceiptLoading" xml:space="preserve">
+    <value>Delivery receipt (loading)</value>
+  </data>
+  <data name="FormTitleLoad" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="FormTitleMassOfOil" xml:space="preserve">
+    <value>Mass of oil</value>
+  </data>
+  <data name="FormTitleSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="MsgConfirmationDiscardToLoad" xml:space="preserve">
+    <value>Your changes have not been saved.
+
+Click OK to confirm that you are sure want to load a receipt.
+Otherwise, click Cancel.</value>
+  </data>
+  <data name="MsgConfirmationDiscardToNew" xml:space="preserve">
+    <value>Your changes have not been saved.
+
+Click OK to confirm that you are sure want to create a new receipt.
+Otherwise, click Cancel.</value>
+  </data>
+  <data name="MsgErrorFailToVerifyUserLogin" xml:space="preserve">
+    <value>Error occurred while verifying user login
+
+{0}</value>
+  </data>
+  <data name="MsgErrorIncorrectUserAndPassword" xml:space="preserve">
+    <value>Incorrect user/password</value>
+  </data>
+  <data name="MsgErrorPrintFailedWithError" xml:space="preserve">
+    <value>Print failed
+
+{0}</value>
+  </data>
+  <data name="MsgErrorSaveFailedWithError" xml:space="preserve">
+    <value>Save failed
+
+{0}</value>
+  </data>
+  <data name="MsgErrorSelectReceiptToLoad" xml:space="preserve">
+    <value>Please select an item to load</value>
+  </data>
+  <data name="MsgErrorValidationFailedToSave" xml:space="preserve">
+    <value>Validation error
+
+{0}
+
+Save anyway? (OK to save)</value>
+  </data>
+  <data name="MsgStatusChangedAndNotSaved" xml:space="preserve">
+    <value>Receipt changed, not saved</value>
+  </data>
+  <data name="MsgStatusNotSave" xml:space="preserve">
+    <value>Not saved</value>
+  </data>
+  <data name="MsgStatusReceiptLoaded" xml:space="preserve">
+    <value>Receipt loaded</value>
+  </data>
+  <data name="MsgStatusSaveFailed" xml:space="preserve">
+    <value>Save failed</value>
+  </data>
+  <data name="MsgStatusSaveSucceeded" xml:space="preserve">
+    <value>Save succeeded</value>
+  </data>
+  <data name="MsgErrorReceiptNoUsedByOtherReceiptType" xml:space="preserve">
+    <value>The receipt number "{0}" to be saved, has been used by another receipt.
+The existing receipt is {1}.
+
+Please use another number instead.</value>
+  </data>
+  <data name="MsgWarnExistingReceipt" xml:space="preserve">
+    <value>The receipt number "{0}" to be saved, is existing in database,
+continue to save will overwrite the existing one.
+
+Click "OK" to overwrite, otherwise click "Cancel".</value>
+  </data>
+  <data name="ReceiptTypeNameDeliveryReceiptDestination" xml:space="preserve">
+    <value>Delivery receipt (destination)</value>
+  </data>
+  <data name="ReceiptTypeNameDeliveryReceiptLoading" xml:space="preserve">
+    <value>Delivery receipt (loading)</value>
+  </data>
+  <data name="ReceiptTypeNameMassOfOil" xml:space="preserve">
+    <value>Mass of oil receipt</value>
+  </data>
+</root>
