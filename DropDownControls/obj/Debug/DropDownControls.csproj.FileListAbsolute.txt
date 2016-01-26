@@ -4,3 +4,9 @@ D:\Projects\ShippingMeasure\Dev\ShippingMeasure\DropDownControls\bin\Debug\DropD
 D:\Projects\ShippingMeasure\Dev\ShippingMeasure\DropDownControls\obj\Debug\DropDownControls.csprojResolveAssemblyReference.cache
 D:\Projects\ShippingMeasure\Dev\ShippingMeasure\DropDownControls\obj\Debug\DropDownControls.dll
 D:\Projects\ShippingMeasure\Dev\ShippingMeasure\DropDownControls\obj\Debug\DropDownControls.pdb
+C:\Users\hp\Source\Repos\ShippingMeasure\DropDownControls\bin\Debug\DropDownControls.LICENSE.TXT
+C:\Users\hp\Source\Repos\ShippingMeasure\DropDownControls\bin\Debug\DropDownControls.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\DropDownControls\bin\Debug\DropDownControls.pdb
+C:\Users\hp\Source\Repos\ShippingMeasure\DropDownControls\obj\Debug\DropDownControls.csprojResolveAssemblyReference.cache
+C:\Users\hp\Source\Repos\ShippingMeasure\DropDownControls\obj\Debug\DropDownControls.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\DropDownControls\obj\Debug\DropDownControls.pdb

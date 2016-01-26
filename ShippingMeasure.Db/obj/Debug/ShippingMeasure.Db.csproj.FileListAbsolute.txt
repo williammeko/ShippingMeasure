@@ -9,3 +9,14 @@ D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\zh-
 D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\obj\Debug\ShippingMeasure.Db.dll
 D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\obj\Debug\ShippingMeasure.Db.pdb
 D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Db\bin\Debug\zh-Hans\ShippingMeasure.Common.resources.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Db.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Db.pdb
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Common.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Core.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Common.pdb
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\bin\Debug\ShippingMeasure.Core.pdb
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\bin\Debug\zh-Hans\ShippingMeasure.Common.resources.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\bin\Debug\zh-Hans\ShippingMeasure.Core.resources.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\obj\Debug\ShippingMeasure.Db.csprojResolveAssemblyReference.cache
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\obj\Debug\ShippingMeasure.Db.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Db\obj\Debug\ShippingMeasure.Db.pdb

@@ -8,3 +8,13 @@ D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Common\obj\Debug
 D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Common\obj\Debug\ShippingMeasure.Common.CommonStrings.zh-Hans.resources
 D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Common\obj\Debug\ShippingMeasure.Common.csproj.GenerateResource.Cache
 D:\Projects\ShippingMeasure\Dev\ShippingMeasure\ShippingMeasure.Common\obj\Debug\zh-Hans\ShippingMeasure.Common.resources.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\bin\Debug\ShippingMeasure.Common.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\bin\Debug\ShippingMeasure.Common.pdb
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\bin\Debug\zh-Hans\ShippingMeasure.Common.resources.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\obj\Debug\ShippingMeasure.Common.csprojResolveAssemblyReference.cache
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\obj\Debug\ShippingMeasure.Common.CommonStrings.resources
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\obj\Debug\ShippingMeasure.Common.CommonStrings.zh-Hans.resources
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\obj\Debug\ShippingMeasure.Common.csproj.GenerateResource.Cache
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\obj\Debug\zh-Hans\ShippingMeasure.Common.resources.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\obj\Debug\ShippingMeasure.Common.dll
+C:\Users\hp\Source\Repos\ShippingMeasure\ShippingMeasure.Common\obj\Debug\ShippingMeasure.Common.pdb
