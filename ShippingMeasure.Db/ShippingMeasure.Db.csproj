@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataImporter.cs" />
     <Compile Include="DbBase.cs" />
     <Compile Include="ReceiptDb.cs" />
     <Compile Include="TankCapacityImporter.cs" />

@@ -50,6 +50,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAddRawDataFiles,
             this.menuRemoveSelected,
@@ -57,48 +58,52 @@
             this.menuImport});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(976, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1301, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuAddRawDataFiles
             // 
             this.menuAddRawDataFiles.Name = "menuAddRawDataFiles";
-            this.menuAddRawDataFiles.Size = new System.Drawing.Size(113, 20);
+            this.menuAddRawDataFiles.Size = new System.Drawing.Size(142, 24);
             this.menuAddRawDataFiles.Text = "Add raw data files";
             // 
             // menuRemoveSelected
             // 
             this.menuRemoveSelected.Enabled = false;
             this.menuRemoveSelected.Name = "menuRemoveSelected";
-            this.menuRemoveSelected.Size = new System.Drawing.Size(108, 20);
+            this.menuRemoveSelected.Size = new System.Drawing.Size(134, 24);
             this.menuRemoveSelected.Text = "Remove selected";
             // 
             // menuSelectAccessFile
             // 
             this.menuSelectAccessFile.Name = "menuSelectAccessFile";
-            this.menuSelectAccessFile.Size = new System.Drawing.Size(121, 20);
+            this.menuSelectAccessFile.Size = new System.Drawing.Size(154, 24);
             this.menuSelectAccessFile.Text = "Select target DB file";
             // 
             // menuImport
             // 
             this.menuImport.Name = "menuImport";
-            this.menuImport.Size = new System.Drawing.Size(82, 20);
+            this.menuImport.Size = new System.Drawing.Size(101, 24);
             this.menuImport.Text = "Start import";
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 478);
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 593);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(976, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1301, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
-            this.splitContainer1.MinimumSize = new System.Drawing.Size(760, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 28);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.MinimumSize = new System.Drawing.Size(1013, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -111,8 +116,9 @@
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.txtAccessFile);
             this.splitContainer1.Panel2MinSize = 600;
-            this.splitContainer1.Size = new System.Drawing.Size(976, 454);
-            this.splitContainer1.SplitterDistance = 358;
+            this.splitContainer1.Size = new System.Drawing.Size(1301, 565);
+            this.splitContainer1.SplitterDistance = 477;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
             // 
             // listTxtFiles
@@ -122,10 +128,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listTxtFiles.FormattingEnabled = true;
             this.listTxtFiles.HorizontalScrollbar = true;
-            this.listTxtFiles.Location = new System.Drawing.Point(3, 3);
+            this.listTxtFiles.ItemHeight = 16;
+            this.listTxtFiles.Location = new System.Drawing.Point(4, 4);
+            this.listTxtFiles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listTxtFiles.Name = "listTxtFiles";
             this.listTxtFiles.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listTxtFiles.Size = new System.Drawing.Size(352, 446);
+            this.listTxtFiles.Size = new System.Drawing.Size(468, 548);
             this.listTxtFiles.TabIndex = 0;
             // 
             // groupBox1
@@ -135,9 +143,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.chkWrapOutput);
             this.groupBox1.Controls.Add(this.txtOutput);
-            this.groupBox1.Location = new System.Drawing.Point(7, 86);
+            this.groupBox1.Location = new System.Drawing.Point(9, 106);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(604, 365);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(805, 455);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Output";
@@ -145,9 +155,10 @@
             // chkWrapOutput
             // 
             this.chkWrapOutput.AutoSize = true;
-            this.chkWrapOutput.Location = new System.Drawing.Point(6, 20);
+            this.chkWrapOutput.Location = new System.Drawing.Point(8, 25);
+            this.chkWrapOutput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkWrapOutput.Name = "chkWrapOutput";
-            this.chkWrapOutput.Size = new System.Drawing.Size(52, 17);
+            this.chkWrapOutput.Size = new System.Drawing.Size(64, 21);
             this.chkWrapOutput.TabIndex = 1;
             this.chkWrapOutput.Text = "Wrap";
             this.chkWrapOutput.UseVisualStyleBackColor = true;
@@ -158,10 +169,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOutput.HideSelection = false;
-            this.txtOutput.Location = new System.Drawing.Point(6, 43);
+            this.txtOutput.Location = new System.Drawing.Point(8, 53);
+            this.txtOutput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(592, 316);
+            this.txtOutput.Size = new System.Drawing.Size(788, 394);
             this.txtOutput.TabIndex = 0;
             this.txtOutput.Text = "";
             this.txtOutput.WordWrap = false;
@@ -170,10 +182,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.MinimumSize = new System.Drawing.Size(595, 52);
+            this.label1.Location = new System.Drawing.Point(5, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.MinimumSize = new System.Drawing.Size(793, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(595, 52);
+            this.label1.Size = new System.Drawing.Size(793, 68);
             this.label1.TabIndex = 1;
             this.label1.Text = "Target Access file\r\n\r\nPlease pay attention that, ALL TANK CAPACITY DATA WILL BE R" +
     "EMOVED, during importing operation.\r\nMake sure that you have a backup file befor" +
@@ -184,21 +197,23 @@
             this.txtAccessFile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAccessFile.Location = new System.Drawing.Point(3, 59);
+            this.txtAccessFile.Location = new System.Drawing.Point(4, 73);
+            this.txtAccessFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccessFile.Name = "txtAccessFile";
             this.txtAccessFile.ReadOnly = true;
-            this.txtAccessFile.Size = new System.Drawing.Size(608, 20);
+            this.txtAccessFile.Size = new System.Drawing.Size(809, 22);
             this.txtAccessFile.TabIndex = 0;
             // 
             // TankCapacityImportingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 500);
+            this.ClientSize = new System.Drawing.Size(1301, 615);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TankCapacityImportingForm";
             this.Text = "Import tank capacity data";
             this.menuStrip1.ResumeLayout(false);

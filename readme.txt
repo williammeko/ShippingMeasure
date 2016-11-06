@@ -43,7 +43,7 @@ These components are optional to install, only while ShippingMeasure.exe cannot 
 
 [Build]
 
-In order to allow user to run the app on their platform normallly, please create builds for both x86 and x64 platforms.
+In order to allow user to run the app on their platform normally, please create builds for both x86 and x64 platforms.
 Steps to create a build (for example: x86)
 	1. Open ShippingMeasure.sln with Visual Studio 2015.
 	2. In Solution Explorer, right-click project ShippingMeasure, select Properties.
