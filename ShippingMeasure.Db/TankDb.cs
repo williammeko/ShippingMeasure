@@ -74,6 +74,7 @@ namespace ShippingMeasure.Db
             }
         }
 
+        [Obsolete]
         public void Add(IEnumerable<OilVolume> oilVolumeItems)
         {
             using (var conn = new OleDbConnection(this.ConnectionString))
@@ -108,6 +109,7 @@ namespace ShippingMeasure.Db
             }
         }
 
+        [Obsolete]
         public void ClearOilVolumeItems()
         {
             new QueryContext(this.ConnectionString, "DELETE * FROM OilVolume").ExecuteNonQuery();

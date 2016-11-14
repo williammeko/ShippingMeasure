@@ -153,6 +153,11 @@ namespace ShippingMeasure.Common
             return Convert.ToInt32(source);
         }
 
+        public static decimal ToDecimal(this object source)
+        {
+            return Convert.ToDecimal(source);
+        }
+
         public static bool ToBoolean(this object source)
         {
             return Convert.ToBoolean(source);
