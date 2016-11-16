@@ -46,6 +46,7 @@
     <Compile Include="Interpolation.cs" />
     <Compile Include="Models\Extensions.cs" />
     <Compile Include="Models\KindOfGoods.cs" />
+    <Compile Include="Models\ListingHeightCorrection.cs" />
     <Compile Include="Models\OilVolume.cs" />
     <Compile Include="Models\Pipe.cs" />
     <Compile Include="Models\Receipt.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Models\ReceiptType.cs" />
     <Compile Include="Models\StandardDensity.cs" />
     <Compile Include="Models\Tank.cs" />
+    <Compile Include="Models\TrimmingHeightCorrection.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vessel.cs" />
     <Compile Include="Models\VolumeCorrectionFactor.cs" />

@@ -9,6 +9,7 @@ using System.Text;
 
 namespace ShippingMeasure.Db
 {
+    [Obsolete]
     public class TankCapacityImporter
     {
         private class RawData

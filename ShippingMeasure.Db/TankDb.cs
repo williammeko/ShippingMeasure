@@ -11,7 +11,10 @@ namespace ShippingMeasure.Db
     public class TankDb : DbBase
     {
         private List<Tank> allTanks = null;
+        [Obsolete]
         private List<OilVolume> allOilVolumeItems = null;
+        private List<TrimmingHeightCorrection> allTrimmingHeightCorrectionItems = null;
+        private List<ListingHeightCorrection> allListingHeightCorrectionItems = null;
         private Vessel vessel = null;
 
         public IEnumerable<Tank> GetAllTanks()
@@ -32,6 +35,7 @@ namespace ShippingMeasure.Db
             return this.allTanks;
         }
 
+        [Obsolete]
         public IEnumerable<OilVolume> GetAllOilVolumeItems()
         {
             if (this.allOilVolumeItems == null)
@@ -51,6 +55,46 @@ namespace ShippingMeasure.Db
             }
 
             return this.allOilVolumeItems;
+        }
+
+        public IEnumerable<TrimmingHeightCorrection> GetAllTrimmingHeightCorrectionItems()
+        {
+            if (this.allTrimmingHeightCorrectionItems == null)
+            {
+                var items = new List<TrimmingHeightCorrection>();
+
+                new QueryContext(this.ConnectionString, "SELECT * FROM TrimmingHeightCorrection").ExecuteReader(r => items.Add(new TrimmingHeightCorrection
+                {
+                    TankName = r["TankName"].ToString(),
+                    Height = r["Height"].TryToDecimal(),
+                    VInclination = r["VInclination"].TryToDecimal(),
+                    Correction = r["Correction"].TryToDecimal(),
+                }));
+
+                this.allTrimmingHeightCorrectionItems = items;
+            }
+
+            return this.allTrimmingHeightCorrectionItems;
+        }
+
+        public IEnumerable<ListingHeightCorrection> GetAllListingHeightCorrectionItems()
+        {
+            if (this.allListingHeightCorrectionItems == null)
+            {
+                var items = new List<ListingHeightCorrection>();
+
+                new QueryContext(this.ConnectionString, "SELECT * FROM ListingHeightCorrection").ExecuteReader(r => items.Add(new ListingHeightCorrection
+                {
+                    TankName = r["TankName"].ToString(),
+                    Height = r["Height"].TryToDecimal(),
+                    HInclination = r["HInclination"].TryToDecimal(),
+                    Correction = r["Correction"].TryToDecimal(),
+                }));
+
+                this.allListingHeightCorrectionItems = items;
+            }
+
+            return this.allListingHeightCorrectionItems;
         }
 
         public void Add(IEnumerable<Tank> tanks)
@@ -99,6 +143,52 @@ namespace ShippingMeasure.Db
             }
         }
 
+        public void Add(IEnumerable<TrimmingHeightCorrection> trimmingHeightCorrectionItems)
+        {
+            using (var conn = new OleDbConnection(this.ConnectionString))
+            {
+                var query = new QueryContext(this.ConnectionString, "INSERT INTO TrimmingHeightCorrection (TankName, Height, VInclination, Correction) VALUES (?, ?, ?, ?)") { Connection = conn };
+
+                trimmingHeightCorrectionItems.Each(c =>
+                {
+                    query.Parameters.Clear();
+                    query.Parameters.AddWithValue(c.TankName);
+                    query.Parameters.AddWithValue(c.Height);
+                    query.Parameters.AddWithValue(c.VInclination);
+                    query.Parameters.AddWithValue(c.Correction);
+                    query.ExecuteNonQuery();
+                });
+            }
+
+            if (this.allTrimmingHeightCorrectionItems != null)
+            {
+                this.allTrimmingHeightCorrectionItems.AddRange(trimmingHeightCorrectionItems);
+            }
+        }
+
+        public void Add(IEnumerable<ListingHeightCorrection> listingHeightCorrectionItems)
+        {
+            using (var conn = new OleDbConnection(this.ConnectionString))
+            {
+                var query = new QueryContext(this.ConnectionString, "INSERT INTO ListingHeightCorrection (TankName, Height, HInclination, Correction) VALUES (?, ?, ?, ?)") { Connection = conn };
+
+                listingHeightCorrectionItems.Each(c =>
+                {
+                    query.Parameters.Clear();
+                    query.Parameters.AddWithValue(c.TankName);
+                    query.Parameters.AddWithValue(c.Height);
+                    query.Parameters.AddWithValue(c.HInclination);
+                    query.Parameters.AddWithValue(c.Correction);
+                    query.ExecuteNonQuery();
+                });
+            }
+
+            if (this.allListingHeightCorrectionItems != null)
+            {
+                this.allListingHeightCorrectionItems.AddRange(listingHeightCorrectionItems);
+            }
+        }
+
         public void ClearTanks()
         {
             new QueryContext(this.ConnectionString, "DELETE * FROM Tanks").ExecuteNonQuery();
@@ -117,6 +207,26 @@ namespace ShippingMeasure.Db
             if (this.allOilVolumeItems != null)
             {
                 this.allOilVolumeItems.Clear();
+            }
+        }
+
+        public void ClearTrimmingHeightCorrectionItems()
+        {
+            new QueryContext(this.ConnectionString, "DELETE * FROM TrimmingHeightCorrection").ExecuteNonQuery();
+
+            if (this.allTrimmingHeightCorrectionItems != null)
+            {
+                this.allTrimmingHeightCorrectionItems.Clear();
+            }
+        }
+
+        public void ClearListingHeightCorrectionItems()
+        {
+            new QueryContext(this.ConnectionString, "DELETE * FROM ListingHeightCorrection").ExecuteNonQuery();
+
+            if (this.allListingHeightCorrectionItems != null)
+            {
+                this.allListingHeightCorrectionItems.Clear();
             }
         }
 

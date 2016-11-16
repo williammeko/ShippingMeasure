@@ -34,7 +34,8 @@ namespace ShippingMeasure.DataConverting
                 this.ResetOutput();
                 this.WriteOutput(TraceLevel.Info, String.Format("Start importing ({0})", DateTime.Now.ToString("HH:mm:ss")));
 
-                var importer = new TankCapacityImporter { AccessFile = this.txtAccessFile.Text };
+                // var importer = new TankCapacityImporter { AccessFile = this.txtAccessFile.Text };
+                var importer = new DataImporter { AccessFile = this.txtAccessFile.Text };
                 importer.WriteLog += (l, m) => this.WriteOutput(l, m);
                 this.listTxtFiles.Items.OfType<string>().Each(f => importer.RawDataFiles.Add(f));
                 importer.Import();

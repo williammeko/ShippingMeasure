@@ -12,7 +12,7 @@ namespace ShippingMeasure.Db
     {
         private class RawData
         {
-            public Vessel Vessel { get; set; }
+            public Vessel Vessel { get; set; } = new Vessel();
             public List<TankFileRawData> Tanks { get; } = new List<TankFileRawData>();
         }
 
@@ -23,6 +23,7 @@ namespace ShippingMeasure.Db
             public List<TankFileTrimmingCorrectionLine> TrimmingCorrectionLines { get; } = new List<TankFileTrimmingCorrectionLine>();
             public List<decimal> HInclinationColumns { get; } = new List<decimal>();
             public List<TankFileListingCorrectionLine> ListingCorrectionLines { get; } = new List<TankFileListingCorrectionLine>();
+            public decimal? HeightOfTank { get; set; }
             public List<TankFileVolumeLine> VolumeLines { get; } = new List<TankFileVolumeLine>();
         }
 
@@ -87,13 +88,39 @@ namespace ShippingMeasure.Db
                 tankDb.ClearListingHeightCorrectionItems();
                 this.OnWriteLog(TraceLevel.Info, String.Format("Saving vessel information: {0}, Cert No.: {1} ...", this.rawData.Vessel.Name, this.rawData.Vessel.CertNo));
                 tankDb.SaveVessel(this.rawData.Vessel);
-                tankDb.Add(this.rawData.Tanks.Select(t => new Tank { Name = t.TankName, Height = t.HeightOfTank }));
+                tankDb.Add(this.rawData.Tanks.Select(t => new Tank { Name = t.TankName, Height = t.HeightOfTank != null ? t.HeightOfTank.Value : 0m }));
                 this.rawData.Tanks.ForEach(t =>
                 {
-                    this.OnWriteLog(TraceLevel.Info, String.Format("Adding TrimmingHeightCorrection data of Tank: {0}, Records: {1} ...", t.TankName, t.TrimmingCorrectionLines.Count));
-                    tankDb.Add(t.TrimmingCorrectionLines);
-                    this.OnWriteLog(TraceLevel.Info, String.Format("Adding ListingHeightCorrection data of Tank: {0}, Records: {1} ...", t.TankName, t.ListingCorrectionLines.Count));
-                    tankDb.Add(t.ListingCorrectionLines);
+                    var trimmingHeightCorrectionItems= t.TrimmingCorrectionLines
+                        .Aggregate(new List<TrimmingHeightCorrection>(), (list, line) =>
+                        {
+                            var i = 0;
+                            line.Corrections.ForEach(c => list.Add(new TrimmingHeightCorrection
+                            {
+                                TankName = t.TankName,
+                                Height = line.Height,
+                                VInclination = t.VInclinationColumns[i++],
+                                Correction = c,
+                            }));
+                            return list;
+                        });
+                    this.OnWriteLog(TraceLevel.Info, String.Format("Adding TrimmingHeightCorrection data of Tank: {0}, Records: {1} -> {2} ...", t.TankName, t.TrimmingCorrectionLines.Count, trimmingHeightCorrectionItems.Count));
+                    tankDb.Add(trimmingHeightCorrectionItems);
+                    var listingHeightCorrectionItems = t.ListingCorrectionLines
+                        .Aggregate(new List<ListingHeightCorrection>(), (list, line) =>
+                        {
+                            var i = 0;
+                            line.Corrections.ForEach(c => list.Add(new ListingHeightCorrection
+                            {
+                                TankName = t.TankName,
+                                Height = line.Height,
+                                HInclination = t.HInclinationColumns[i++],
+                                Correction = c,
+                            }));
+                            return list;
+                        });
+                    this.OnWriteLog(TraceLevel.Info, String.Format("Adding ListingHeightCorrection data of Tank: {0}, Records: {1} -> {2} ...", t.TankName, t.ListingCorrectionLines.Count, listingHeightCorrectionItems.Count));
+                    tankDb.Add(listingHeightCorrectionItems);
                 });
             }
             catch (Exception ex)
@@ -254,7 +281,21 @@ namespace ShippingMeasure.Db
                 throw new FormatException(String.Format("Invalid trimming height correction line: {0}", line));
             }
 
-            var item = new TankFileTrimmingCorrectionLine { Height = data[0], };
+            var height = data[0].TryToDecimal();
+            var ullage = data[1].TryToDecimal();
+            if (tankRawData.HeightOfTank != null)
+            {
+                if (height + ullage != tankRawData.HeightOfTank.Value)
+                {
+                    throw new FormatException(String.Format("Expected height({0}) plus ullage({1}) is {2}", height, ullage, tankRawData.HeightOfTank));
+                }
+            }
+            else
+            {
+                tankRawData.HeightOfTank = height + ullage;
+            }
+
+            var item = new TankFileTrimmingCorrectionLine { Height = height, };
             for (int i = 2; i < data.Count; i++)
             {
                 item.Corrections.Add(data[i]);
@@ -291,7 +332,6 @@ namespace ShippingMeasure.Db
 
         private void ReadVolumeLine(StreamReader reader, TankFileRawData tankRawData)
         {
-            // todo ...
             var line = reader.ReadLine().Trim();
             if (this.IsInvalidLine(line))
             {
