@@ -642,15 +642,16 @@ namespace ShippingMeasure.Controls
                     .GetValue(tankName, height, this.VInclination.Value)
                     .MathRound();
                 var heightQueried = height - hCorrection - vCorrection;
+                var volumeQueried = this.TankDb.GetAllVolumeItems().GetValue(tankName, heightQueried);
 
 
 
-                var volumeQueried = this.TankDb.GetAllOilVolumeItems().GetValue(tankName, this.HInclination.Value, this.VInclination.Value, height);
+                //var volumeQueried = this.TankDb.GetAllOilVolumeItems().GetValue(tankName, this.HInclination.Value, this.VInclination.Value, height);
 
-                decimal a = 0.000012m;
-                decimal volumeMeasured = volumeQueried * (1 + 3 * a * (tempOfTank - 20));
+                //decimal a = 0.000012m;
+                //decimal volumeMeasured = volumeQueried * (1 + 3 * a * (tempOfTank - 20));
 
-                row.Cells[this.colVolume.Index].Value = volumeMeasured - volumeOfWater;
+                //row.Cells[this.colVolume.Index].Value = volumeMeasured - volumeOfWater;
             }
             catch (Exception ex)
             {

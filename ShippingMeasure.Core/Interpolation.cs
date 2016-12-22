@@ -429,6 +429,41 @@ namespace ShippingMeasure.Core
             #endregion
         }
 
+        public static decimal GetValue(this IEnumerable<Volume> source, string tankName, decimal height)
+        {
+            var item = source.FirstOrDefault(v => v.Height == height
+                && v.TankName.Equals(tankName));
+            if (item != null)
+            {
+                return item.Value;
+            }
+
+            #region record not found, interpolate a value
+
+            var lowerHi = source
+                .Where(v => v.Height <= height)
+                .OrderByDescending(v => v.Height)
+                .FirstOrDefault();
+            if (lowerHi == null)
+            {
+                throw new Exception(String.Format("Volume record not found. Height = {0}", height));
+            }
+
+            var upperHi = source
+                .Where(v => v.Height >= height)
+                .OrderBy(v => v.Height)
+                .FirstOrDefault();
+
+            if (upperHi == null)
+            {
+                throw new Exception(String.Format("Volume record not found. Height = {0}", height));
+            }
+
+            return Interpolate(height, lowerHi.Height, upperHi.Height, lowerHi.Value, upperHi.Value);
+
+            #endregion
+        }
+
         /// <summary>
         /// returns a value between lowerValue and upperValues
         /// </summary>
