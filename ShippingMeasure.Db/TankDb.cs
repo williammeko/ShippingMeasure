@@ -15,6 +15,7 @@ namespace ShippingMeasure.Db
         private List<OilVolume> allOilVolumeItems = null;
         private List<ListingHeightCorrection> allListingHeightCorrectionItems = null;
         private List<TrimmingHeightCorrection> allTrimmingHeightCorrectionItems = null;
+        private List<Volume> allVolumeItems = null;
         private Vessel vessel = null;
 
         public IEnumerable<Tank> GetAllTanks()
@@ -95,6 +96,25 @@ namespace ShippingMeasure.Db
             }
 
             return this.allTrimmingHeightCorrectionItems;
+        }
+
+        public IEnumerable<Volume> GetAllVolumeItems()
+        {
+            if (this.allVolumeItems == null)
+            {
+                var items = new List<Volume>();
+
+                new QueryContext(this.ConnectionString, "SELECT * FROM Volumes").ExecuteReader(r => items.Add(new Volume
+                {
+                    TankName = r["TankName"].ToString(),
+                    Height = r["Height"].TryToDecimal(),
+                    Value = r["Volume"].TryToDecimal(),
+                }));
+
+                this.allVolumeItems = items;
+            }
+
+            return this.allVolumeItems;
         }
 
         public void Add(IEnumerable<Tank> tanks)
@@ -189,6 +209,28 @@ namespace ShippingMeasure.Db
             }
         }
 
+        public void Add(IEnumerable<Volume> volumeItems)
+        {
+            using (var conn = new OleDbConnection(this.ConnectionString))
+            {
+                var query = new QueryContext(this.ConnectionString, "INSERT INTO Volume (TankName, Height, Volume) VALUES (?, ?, ?)") { Connection = conn };
+
+                volumeItems.Each(v =>
+                {
+                    query.Parameters.Clear();
+                    query.Parameters.AddWithValue(v.TankName);
+                    query.Parameters.AddWithValue(v.Height);
+                    query.Parameters.AddWithValue(v.Value);
+                    query.ExecuteNonQuery();
+                });
+            }
+
+            if (this.allVolumeItems != null)
+            {
+                this.allVolumeItems.AddRange(volumeItems);
+            }
+        }
+
         public void ClearTanks()
         {
             new QueryContext(this.ConnectionString, "DELETE * FROM Tanks").ExecuteNonQuery();
@@ -227,6 +269,16 @@ namespace ShippingMeasure.Db
             if (this.allListingHeightCorrectionItems != null)
             {
                 this.allListingHeightCorrectionItems.Clear();
+            }
+        }
+
+        public void ClearVolumeItems()
+        {
+            new QueryContext(this.ConnectionString, "DELETE * FROM Volumes").ExecuteNonQuery();
+
+            if (this.allVolumeItems != null)
+            {
+                this.allVolumeItems.Clear();
             }
         }
 

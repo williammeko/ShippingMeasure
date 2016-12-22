@@ -121,6 +121,19 @@ namespace ShippingMeasure.Db
                         });
                     this.OnWriteLog(TraceLevel.Info, String.Format("Adding ListingHeightCorrection data of Tank: {0}, Records: {1} -> {2} ...", t.TankName, t.ListingCorrectionLines.Count, listingHeightCorrectionItems.Count));
                     tankDb.Add(listingHeightCorrectionItems);
+
+
+                    var volumeItems = t.VolumeLines
+                        .Select(line => new Volume
+                        {
+                            TankName = t.TankName,
+                            Height = line.Height,
+                            Value = line.Volume,
+                        })
+                        .ToList();
+                    this.OnWriteLog(TraceLevel.Info, String.Format("Adding Volume data of Tank: {0}, Records: {1} ...", t.TankName, t.VolumeLines.Count));
+                    tankDb.Add(volumeItems);
+
                 });
             }
             catch (Exception ex)
