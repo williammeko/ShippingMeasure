@@ -13,8 +13,8 @@ namespace ShippingMeasure.Db
         private List<Tank> allTanks = null;
         [Obsolete]
         private List<OilVolume> allOilVolumeItems = null;
-        private List<TrimmingHeightCorrection> allTrimmingHeightCorrectionItems = null;
         private List<ListingHeightCorrection> allListingHeightCorrectionItems = null;
+        private List<TrimmingHeightCorrection> allTrimmingHeightCorrectionItems = null;
         private Vessel vessel = null;
 
         public IEnumerable<Tank> GetAllTanks()
@@ -57,26 +57,6 @@ namespace ShippingMeasure.Db
             return this.allOilVolumeItems;
         }
 
-        public IEnumerable<TrimmingHeightCorrection> GetAllTrimmingHeightCorrectionItems()
-        {
-            if (this.allTrimmingHeightCorrectionItems == null)
-            {
-                var items = new List<TrimmingHeightCorrection>();
-
-                new QueryContext(this.ConnectionString, "SELECT * FROM TrimmingHeightCorrection").ExecuteReader(r => items.Add(new TrimmingHeightCorrection
-                {
-                    TankName = r["TankName"].ToString(),
-                    Height = r["Height"].TryToDecimal(),
-                    VInclination = r["VInclination"].TryToDecimal(),
-                    Correction = r["Correction"].TryToDecimal(),
-                }));
-
-                this.allTrimmingHeightCorrectionItems = items;
-            }
-
-            return this.allTrimmingHeightCorrectionItems;
-        }
-
         public IEnumerable<ListingHeightCorrection> GetAllListingHeightCorrectionItems()
         {
             if (this.allListingHeightCorrectionItems == null)
@@ -95,6 +75,26 @@ namespace ShippingMeasure.Db
             }
 
             return this.allListingHeightCorrectionItems;
+        }
+
+        public IEnumerable<TrimmingHeightCorrection> GetAllTrimmingHeightCorrectionItems()
+        {
+            if (this.allTrimmingHeightCorrectionItems == null)
+            {
+                var items = new List<TrimmingHeightCorrection>();
+
+                new QueryContext(this.ConnectionString, "SELECT * FROM TrimmingHeightCorrection").ExecuteReader(r => items.Add(new TrimmingHeightCorrection
+                {
+                    TankName = r["TankName"].ToString(),
+                    Height = r["Height"].TryToDecimal(),
+                    VInclination = r["VInclination"].TryToDecimal(),
+                    Correction = r["Correction"].TryToDecimal(),
+                }));
+
+                this.allTrimmingHeightCorrectionItems = items;
+            }
+
+            return this.allTrimmingHeightCorrectionItems;
         }
 
         public void Add(IEnumerable<Tank> tanks)

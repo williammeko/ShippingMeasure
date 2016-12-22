@@ -627,6 +627,24 @@ namespace ShippingMeasure.Controls
                 var tempOfTank = row.Cells[this.colTemperatureOfTank.Index].Value.TryToDecimal();
                 var volumeOfWater = row.Cells[this.colVolumeOfWater.Index].Value.TryToDecimal();
 
+
+
+
+
+
+                // todo ...
+                var hCorrection = this.TankDb
+                    .GetAllListingHeightCorrectionItems()
+                    .GetValue(tankName, height, this.HInclination.Value)
+                    .MathRound();
+                var vCorrection = this.TankDb
+                    .GetAllTrimmingHeightCorrectionItems()
+                    .GetValue(tankName, height, this.VInclination.Value)
+                    .MathRound();
+                var heightQueried = height - hCorrection - vCorrection;
+
+
+
                 var volumeQueried = this.TankDb.GetAllOilVolumeItems().GetValue(tankName, this.HInclination.Value, this.VInclination.Value, height);
 
                 decimal a = 0.000012m;

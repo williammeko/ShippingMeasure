@@ -179,5 +179,15 @@ namespace ShippingMeasure.Common
                 action(item);
             }
         }
+
+        public static decimal MathRound(this decimal source)
+        {
+            return source.MathRound(3);
+        }
+
+        public static decimal MathRound(this decimal source, int decimals)
+        {
+            return Math.Round(source, decimals);
+        }
     }
 }

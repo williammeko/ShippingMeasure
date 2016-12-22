@@ -96,14 +96,26 @@ namespace ShippingMeasure.Core
 
             #region record not found, interpolate a value
 
-            var lowerTLowerDsItems = source.Where(f => f.Temp <= temp && f.DensityOfStandard <= densityOfStandard)
-                .OrderByDescending(f => f.Temp).ThenByDescending(f => f.DensityOfStandard).ToList();
-            var lowerTUpperDsItems = source.Where(f => f.Temp <= temp && f.DensityOfStandard >= densityOfStandard)
-                .OrderByDescending(f => f.Temp).ThenBy(f => f.DensityOfStandard).ToList();
-            var upperTLowerDsItems = source.Where(f => f.Temp >= temp && f.DensityOfStandard <= densityOfStandard)
-                .OrderBy(f => f.Temp).ThenByDescending(f => f.DensityOfStandard).ToList();
-            var upperTUpperDsItems = source.Where(f => f.Temp >= temp && f.DensityOfStandard >= densityOfStandard)
-                .OrderBy(f => f.Temp).ThenBy(f => f.DensityOfStandard).ToList();
+            var lowerTLowerDsItems = source
+                .Where(f => f.Temp <= temp && f.DensityOfStandard <= densityOfStandard)
+                .OrderByDescending(f => f.Temp)
+                .ThenByDescending(f => f.DensityOfStandard)
+                .ToList();
+            var lowerTUpperDsItems = source
+                .Where(f => f.Temp <= temp && f.DensityOfStandard >= densityOfStandard)
+                .OrderByDescending(f => f.Temp)
+                .ThenBy(f => f.DensityOfStandard)
+                .ToList();
+            var upperTLowerDsItems = source
+                .Where(f => f.Temp >= temp && f.DensityOfStandard <= densityOfStandard)
+                .OrderBy(f => f.Temp)
+                .ThenByDescending(f => f.DensityOfStandard)
+                .ToList();
+            var upperTUpperDsItems = source
+                .Where(f => f.Temp >= temp && f.DensityOfStandard >= densityOfStandard)
+                .OrderBy(f => f.Temp)
+                .ThenBy(f => f.DensityOfStandard)
+                .ToList();
 
             VolumeCorrectionFactor lowerTLowerDs = null;
             VolumeCorrectionFactor lowerTUpperDs = null;
@@ -259,6 +271,160 @@ namespace ShippingMeasure.Core
             decimal inputHiInputViInputH = Interpolate(height, lowerHiLowerViLowerH.Height, lowerHiLowerViUpperH.Height, inputHiInputViLowerH, inputHiInputViUpperH);
 
             return inputHiInputViInputH;
+
+            #endregion
+        }
+
+        public static decimal GetValue(this IEnumerable<ListingHeightCorrection> source, string tankName, decimal height, decimal hInclination)
+        {
+            var item = source.FirstOrDefault(c => c.Height == height
+                && c.HInclination == hInclination
+                && c.TankName.Equals(tankName));
+            if (item != null)
+            {
+                return item.Correction;
+            }
+
+            #region record not found, interpolate a value
+
+            var lowerHiLowerHItems = source
+                .Where(c => c.Height <= height && c.HInclination <= hInclination)
+                .OrderByDescending(c => c.Height)
+                .ThenByDescending(c => c.HInclination);
+            var lowerHiUpperHItems = source
+                .Where(c => c.Height <= height && c.HInclination >= hInclination)
+                .OrderByDescending(c => c.Height)
+                .ThenBy(c => c.HInclination);
+            var upperHiLowerHItems = source
+                .Where(c => c.Height >= height && c.HInclination <= hInclination)
+                .OrderBy(c => c.Height)
+                .ThenByDescending(c => c.HInclination);
+            var upperHiUpperHItems = source
+                .Where(c => c.Height >= height && c.HInclination >= hInclination)
+                .OrderBy(c => c.Height)
+                .ThenBy(c => c.Height);
+
+            ListingHeightCorrection lowerHiLowerH = null;
+            ListingHeightCorrection lowerHiUpperH = null;
+            ListingHeightCorrection upperHiLowerH = null;
+            ListingHeightCorrection upperHiUpperH = null;
+
+            if (lowerHiLowerHItems.Any() && !lowerHiUpperHItems.Any() && !upperHiLowerHItems.Any() && upperHiUpperHItems.Any())
+            {
+                lowerHiLowerH = lowerHiLowerHItems.First();
+                upperHiUpperH = upperHiUpperHItems.First();
+
+                var valueBetweenLowerAndUpper = Interpolate(
+                    new[]
+                    {
+                        new Tuple<decimal, decimal, decimal>(lowerHiLowerH.Height, height, upperHiUpperH.Height),
+                        new Tuple<decimal, decimal, decimal>(lowerHiLowerH.HInclination, hInclination, upperHiUpperH.HInclination)
+                    },
+                    lowerHiLowerH.Correction, upperHiUpperH.Correction);
+
+                return valueBetweenLowerAndUpper;
+            }
+
+            foreach (var i in lowerHiLowerHItems)
+            {
+                lowerHiLowerH = i;
+                lowerHiUpperH = lowerHiUpperHItems.FirstOrDefault(c => c.Height == lowerHiLowerH.Height);
+                upperHiLowerH = upperHiLowerHItems.FirstOrDefault(c => c.HInclination == lowerHiLowerH.HInclination);
+                upperHiUpperH = upperHiUpperHItems.FirstOrDefault(c => c.Height == upperHiLowerH.Height && c.HInclination == lowerHiUpperH.HInclination);
+
+                if (lowerHiLowerH != null && lowerHiUpperH != null && upperHiLowerH != null && upperHiUpperH != null)
+                {
+                    break;
+                }
+            }
+
+            if (lowerHiLowerH == null || lowerHiUpperH == null || upperHiLowerH == null || upperHiUpperH == null)
+            {
+                throw new Exception(String.Format("Listing height correction record not found. Height = {0}, HInclination = {1}", height, hInclination));
+            }
+
+            var inputHiLowerH = Interpolate(height, lowerHiLowerH.Height, upperHiLowerH.Height, lowerHiLowerH.Correction, upperHiLowerH.Correction);
+            var inputHiUpperH = Interpolate(height, lowerHiUpperH.Height, upperHiUpperH.Height, lowerHiUpperH.Correction, upperHiUpperH.Correction);
+            var inputHiInputH = Interpolate(hInclination, lowerHiLowerH.HInclination, lowerHiUpperH.HInclination, inputHiLowerH, inputHiUpperH);
+
+            return inputHiInputH;
+
+            #endregion
+        }
+
+        public static decimal GetValue(this IEnumerable<TrimmingHeightCorrection> source, string tankName, decimal height, decimal vInclination)
+        {
+            var item = source.FirstOrDefault(c => c.Height == height
+                && c.VInclination == vInclination
+                && c.TankName.Equals(tankName));
+            if (item != null)
+            {
+                return item.Correction;
+            }
+
+            #region record not found, interpolate a value
+
+            var lowerHiLowerVItems = source
+                .Where(c => c.Height <= height && c.VInclination <= vInclination)
+                .OrderByDescending(c => c.Height)
+                .ThenByDescending(c => c.VInclination);
+            var lowerHiUpperVItems = source
+                .Where(c => c.Height <= height && c.VInclination >= vInclination)
+                .OrderByDescending(c => c.Height)
+                .ThenBy(c => c.VInclination);
+            var upperHiLowerVItems = source
+                .Where(c => c.Height >= height && c.VInclination <= vInclination)
+                .OrderBy(c => c.Height)
+                .ThenByDescending(c => c.VInclination);
+            var upperHiUpperVItems = source
+                .Where(c => c.Height >= height && c.VInclination >= vInclination)
+                .OrderBy(c => c.Height)
+                .ThenBy(c => c.Height);
+
+            TrimmingHeightCorrection lowerHiLowerV = null;
+            TrimmingHeightCorrection lowerHiUpperV = null;
+            TrimmingHeightCorrection upperHiLowerV = null;
+            TrimmingHeightCorrection upperHiUpperV = null;
+
+            if (lowerHiLowerVItems.Any() && !lowerHiUpperVItems.Any() && !upperHiLowerVItems.Any() && upperHiUpperVItems.Any())
+            {
+                lowerHiLowerV = lowerHiLowerVItems.First();
+                upperHiUpperV = upperHiUpperVItems.First();
+
+                var valueBetweenLowerAndUpper = Interpolate(
+                    new[]
+                    {
+                        new Tuple<decimal, decimal, decimal>(lowerHiLowerV.Height, height, upperHiUpperV.Height),
+                        new Tuple<decimal, decimal, decimal>(lowerHiLowerV.VInclination, vInclination, upperHiUpperV.VInclination)
+                    },
+                    lowerHiLowerV.Correction, upperHiUpperV.Correction);
+
+                return valueBetweenLowerAndUpper;
+            }
+
+            foreach (var i in lowerHiLowerVItems)
+            {
+                lowerHiLowerV = i;
+                lowerHiUpperV = lowerHiUpperVItems.FirstOrDefault(c => c.Height == lowerHiLowerV.Height);
+                upperHiLowerV = upperHiLowerVItems.FirstOrDefault(c => c.VInclination == lowerHiLowerV.VInclination);
+                upperHiUpperV = upperHiUpperVItems.FirstOrDefault(c => c.Height == upperHiLowerV.Height && c.VInclination == lowerHiUpperV.VInclination);
+
+                if (lowerHiLowerV != null && lowerHiUpperV != null && upperHiLowerV != null && upperHiUpperV != null)
+                {
+                    break;
+                }
+            }
+
+            if (lowerHiLowerV == null || lowerHiUpperV == null || upperHiLowerV == null || upperHiUpperV == null)
+            {
+                throw new Exception(String.Format("Trimming height correction record not found. Height = {0}, VInclination = {1}", height, vInclination));
+            }
+
+            var inputHiLowerV = Interpolate(height, lowerHiLowerV.Height, upperHiLowerV.Height, lowerHiLowerV.Correction, upperHiLowerV.Correction);
+            var inputHiUpperV = Interpolate(height, lowerHiUpperV.Height, upperHiUpperV.Height, lowerHiUpperV.Correction, upperHiUpperV.Correction);
+            var inputHiInputV = Interpolate(vInclination, lowerHiLowerV.VInclination, lowerHiUpperV.VInclination, inputHiLowerV, inputHiUpperV);
+
+            return inputHiInputV;
 
             #endregion
         }
