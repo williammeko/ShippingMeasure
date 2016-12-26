@@ -179,7 +179,7 @@ namespace ShippingMeasure.Db
                         dataType = TankFileDataType.Volume;
                         break;
                     default:
-                        ReadDataLine(reader, dataType, tankRawData); // read one line of data of specified data type
+                        ParseDataLine(line, dataType, tankRawData); // parse line of data of specified data type
                         break;
                 }
             }
@@ -251,33 +251,26 @@ namespace ShippingMeasure.Db
             tankRawData.HInclinationColumns.AddRange(columns);
         }
 
-        private void ReadDataLine(StreamReader reader, TankFileDataType dataType, TankFileRawData tankRawData)
+        private void ParseDataLine(string line, TankFileDataType dataType, TankFileRawData tankRawData)
         {
-            if (reader.EndOfStream)
-            {
-                return;
-            }
-
             switch (dataType)
             {
                 case TankFileDataType.TrimmingHeightCorrection:
-                    this.ReadTrimmingHeightCorrectionLine(reader, tankRawData);
+                    this.ParseTrimmingHeightCorrectionLine(line, tankRawData);
                     break;
                 case TankFileDataType.ListingHeightCorrection:
-                    this.ReadListingHeightCorrectionLine(reader, tankRawData);
+                    this.ParseListingHeightCorrectionLine(line, tankRawData);
                     break;
                 case TankFileDataType.Volume:
-                    this.ReadVolumeLine(reader, tankRawData);
+                    this.ParseVolumeLine(line, tankRawData);
                     break;
                 default:
                     break;
             }
         }
 
-        private void ReadTrimmingHeightCorrectionLine(StreamReader reader, TankFileRawData tankRawData)
+        private void ParseTrimmingHeightCorrectionLine(string line, TankFileRawData tankRawData)
         {
-            // todo ...
-            var line = reader.ReadLine().Trim();
             if (this.IsInvalidLine(line))
             {
                 return;
@@ -316,9 +309,8 @@ namespace ShippingMeasure.Db
             tankRawData.TrimmingCorrectionLines.Add(item);
         }
 
-        private void ReadListingHeightCorrectionLine(StreamReader reader, TankFileRawData tankRawData)
+        private void ParseListingHeightCorrectionLine(string line, TankFileRawData tankRawData)
         {
-            var line = reader.ReadLine().Trim();
             if (this.IsInvalidLine(line))
             {
                 return;
@@ -343,9 +335,8 @@ namespace ShippingMeasure.Db
             tankRawData.ListingCorrectionLines.Add(item);
         }
 
-        private void ReadVolumeLine(StreamReader reader, TankFileRawData tankRawData)
+        private void ParseVolumeLine(string line, TankFileRawData tankRawData)
         {
-            var line = reader.ReadLine().Trim();
             if (this.IsInvalidLine(line))
             {
                 return;

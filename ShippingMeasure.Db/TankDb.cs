@@ -213,7 +213,7 @@ namespace ShippingMeasure.Db
         {
             using (var conn = new OleDbConnection(this.ConnectionString))
             {
-                var query = new QueryContext(this.ConnectionString, "INSERT INTO Volume (TankName, Height, Volume) VALUES (?, ?, ?)") { Connection = conn };
+                var query = new QueryContext(this.ConnectionString, "INSERT INTO Volumes (TankName, Height, Volume) VALUES (?, ?, ?)") { Connection = conn };
 
                 volumeItems.Each(v =>
                 {
