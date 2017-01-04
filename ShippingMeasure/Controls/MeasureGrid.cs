@@ -627,12 +627,6 @@ namespace ShippingMeasure.Controls
                 var tempOfTank = row.Cells[this.colTemperatureOfTank.Index].Value.TryToDecimal();
                 var volumeOfWater = row.Cells[this.colVolumeOfWater.Index].Value.TryToDecimal();
 
-
-
-
-
-
-                // todo ...
                 var hCorrection = this.TankDb
                     .GetAllListingHeightCorrectionItems()
                     .GetValue(tankName, height, this.HInclination.Value)
@@ -644,14 +638,9 @@ namespace ShippingMeasure.Controls
                 var heightQueried = height - hCorrection - vCorrection;
                 var volumeQueried = this.TankDb.GetAllVolumeItems().GetValue(tankName, heightQueried);
 
-
-
-                //var volumeQueried = this.TankDb.GetAllOilVolumeItems().GetValue(tankName, this.HInclination.Value, this.VInclination.Value, height);
-
-                //decimal a = 0.000012m;
-                //decimal volumeMeasured = volumeQueried * (1 + 3 * a * (tempOfTank - 20));
-
-                //row.Cells[this.colVolume.Index].Value = volumeMeasured - volumeOfWater;
+                decimal a = 0.000012m;
+                decimal volumeMeasured = volumeQueried * (1 + 3 * a * (tempOfTank - 20));
+                row.Cells[this.colVolume.Index].Value = volumeMeasured - volumeOfWater;
             }
             catch (Exception ex)
             {
@@ -682,7 +671,20 @@ namespace ShippingMeasure.Controls
 
                 var tankName = row.Cells[this.colTankName.Index].Value.ToString();
                 var tempOfTank = row.Cells[this.colTemperatureOfTank.Index].Value.TryToDecimal();
-                var volumeQueried = this.TankDb.GetAllOilVolumeItems().GetValue(tankName, this.HInclination.Value, this.VInclination.Value, heightOfWater);
+
+
+
+
+                var hCorrection = this.TankDb
+                    .GetAllListingHeightCorrectionItems()
+                    .GetValue(tankName, heightOfWater, this.HInclination.Value)
+                    .MathRound();
+                var vCorrection = this.TankDb
+                    .GetAllTrimmingHeightCorrectionItems()
+                    .GetValue(tankName, heightOfWater, this.VInclination.Value)
+                    .MathRound();
+                var heightQueried = heightOfWater - hCorrection - vCorrection;
+                var volumeQueried = this.TankDb.GetAllVolumeItems().GetValue(tankName, heightQueried);
 
                 decimal a = 0.000012m;
                 decimal volumeMeasured = volumeQueried * (1 + 3 * a * (tempOfTank - 20));
