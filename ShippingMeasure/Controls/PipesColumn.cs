@@ -89,6 +89,7 @@ namespace ShippingMeasure.Controls
         public PipesEditingControl()
         {
             TabStop = false;
+            //AfterCheck += (s, e) => NotifyDataGridViewOfValueChange();
         }
 
         #region IDataGridViewEditingControl Members
@@ -193,14 +194,35 @@ namespace ShippingMeasure.Controls
         }
     }
 
+    public class VolumeChanedEventArgs : EventArgs
+    {
+        public List<Pipe> CheckedPipeItems { get; set; }
+    }
 
     public class PipesBox : ComboTreeBox
     {
+        public event EventHandler<VolumeChanedEventArgs> VolumeChanged;
+
         internal const TextFormatFlags TEXT_FORMAT_FLAGS = TextFormatFlags.TextBoxControl | TextFormatFlags.Left | TextFormatFlags.VerticalCenter | TextFormatFlags.PathEllipsis;
 
         public PipesBox() : base()
         {
             this.ShowCheckBoxes = true;
+            this.AfterCheck += (s, e) => this.OnVolumeChanged();
+        }
+
+        protected virtual void OnVolumeChanged()
+        {
+            if (this.VolumeChanged != null)
+            {
+                var e = new VolumeChanedEventArgs
+                {
+                    CheckedPipeItems = this.CheckedNodes
+                        .Select(node => (Pipe)node.Tag)
+                        .ToList(),
+                };
+                this.VolumeChanged(this, e);
+            }
         }
 
         protected override void OnPaintContent(DropDownPaintEventArgs e)

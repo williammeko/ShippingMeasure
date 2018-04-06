@@ -35,7 +35,8 @@ namespace ShippingMeasure.Controls
         public event Action<decimal?> VInclinationChanged;
         public event Action Dirty;
         public event Action<string> ValidationErrorMessageChanged;
-        public event Action<decimal?> TotalOfVolumeOfPipesChanged;
+        //public event Action<decimal?> TotalOfVolumeOfPipesChanged;
+        public event Action<List<Pipe>> PipeVolumeChanged;
         public event Action<KindOfGoods> SelectedKindOfGoodsChanged; 
 
         private bool loading = false;
@@ -239,7 +240,8 @@ namespace ShippingMeasure.Controls
             this.txtForeDraft.TextChanged += (s, a) => this.ReportDirty();
             this.txtAftDraft.TextChanged += (s, a) => this.ReportDirty();
             this.txtVInclination.TextChanged += (s, a) => this.ReportDirty();
-            this.cmbPipes.AfterCheck += (s, a) => { this.ReportDirty(); this.OnTotalOfVolumeOfPipesChanged(this.TotalOfVolumeOfPipes); };
+            //this.cmbPipes.AfterCheck += (s, a) => { this.ReportDirty(); this.OnTotalOfVolumeOfPipesChanged(this.TotalOfVolumeOfPipes); };
+            this.cmbPipes.VolumeChanged += (s, a) => { this.ReportDirty(); this.OnPipeVolumeChanged(a.CheckedPipeItems); };
             this.txtReceiptNo.TextChanged += (s, a) => this.ReportDirty();
             this.cmbKindOfGoods.SelectedNodeChanged += (s, a) => this.OnSelectedKindChanged();
 
@@ -312,12 +314,17 @@ namespace ShippingMeasure.Controls
             }
         }
 
-        private void OnTotalOfVolumeOfPipesChanged(decimal? value)
+        //private void OnTotalOfVolumeOfPipesChanged(decimal? value)
+        //{
+        //    if (this.TotalOfVolumeOfPipesChanged != null)
+        //    {
+        //        this.TotalOfVolumeOfPipesChanged(value);
+        //    }
+        //}
+
+        private void OnPipeVolumeChanged(List<Pipe> checkedPipeItems)
         {
-            if (this.TotalOfVolumeOfPipesChanged != null)
-            {
-                this.TotalOfVolumeOfPipesChanged(value);
-            }
+            this.PipeVolumeChanged?.Invoke(checkedPipeItems);
         }
 
         private void OnSelectedKindChanged()

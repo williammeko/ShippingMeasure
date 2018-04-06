@@ -85,6 +85,28 @@ namespace ShippingMeasure.Controls
             }
         }
 
+        public List<Pipe> CheckedPipeItems
+        {
+            set
+            {
+                var oriValue = this.checkedPipeItems;
+                this.checkedPipeItems = value;
+
+                // if original list is not the same as the new one.
+                if (
+                    (oriValue == null || !oriValue.Any()) && value != null && value.Any()
+                    || oriValue != null && oriValue.Any() && (value == null || !value.Any())
+                    || oriValue != null && value != null && (
+                        oriValue.Count != value.Count
+                        || !oriValue.Any(v => value.Any(itemInNewList => itemInNewList == v))
+                    )
+                )
+                {
+                    this.OnPipeVolumeChanged(value);
+                }
+            }
+        }
+
         public event Action<decimal?> TotalOfVolumeOfStandardChanged;
         public event Action<decimal?> TotalOfVolumeChanged;
         public event Action<decimal?> TotalOfVolumeOfWaterChanged;
@@ -121,6 +143,7 @@ namespace ShippingMeasure.Controls
         private BackgroundWorker calculationWorker = null;
         private Dictionary<string, object> propertyValues = new Dictionary<string, object>() { { "Enabled", true } };
         private CultureInfo currentCulture = Thread.CurrentThread.CurrentUICulture;
+        private List<Pipe> checkedPipeItems;
 
         public void LoadReceipt(Receipt receipt)
         {
@@ -626,6 +649,8 @@ namespace ShippingMeasure.Controls
                 var height = this.VolumeByHeight ? row.Cells[this.colHeight.Index].Value.TryToDecimal() : this.TankDb.GetAllTanks().First(t => t.Name.Equals(tankName)).Height - row.Cells[this.colHeight.Index].Value.TryToDecimal();
                 var tempOfTank = row.Cells[this.colTemperatureOfTank.Index].Value.TryToDecimal();
                 var volumeOfWater = row.Cells[this.colVolumeOfWater.Index].Value.TryToDecimal();
+                var pipe = this.checkedPipeItems != null ? this.checkedPipeItems.FirstOrDefault(p => tankName.Equals(p.Name)) : null;
+                var volumeOfPipe = pipe != null ? pipe.Volume : 0m;
 
                 var hCorrection = this.TankDb
                     .GetAllListingHeightCorrectionItems()
@@ -640,7 +665,7 @@ namespace ShippingMeasure.Controls
 
                 decimal a = 0.000012m;
                 decimal volumeMeasured = volumeQueried * (1 + 3 * a * (tempOfTank - 20));
-                row.Cells[this.colVolume.Index].Value = volumeMeasured - volumeOfWater;
+                row.Cells[this.colVolume.Index].Value = volumeMeasured + volumeOfPipe - volumeOfWater;
             }
             catch (Exception ex)
             {
@@ -794,11 +819,22 @@ namespace ShippingMeasure.Controls
             });
         }
 
-        private void OnVolumeOfPipesChanged(decimal? value)
+        //private void OnVolumeOfPipesChanged(decimal? value)
+        //{
+        //    this.Rows.Cast<DataGridViewRow>().Each(r =>
+        //    {
+        //        if (this.AutoCalculate && this.IsHeightFulfilled(r.Index))
+        //        {
+        //            this.TryCalculateVolume(r.Index);
+        //        }
+        //    });
+        //}
+
+        private void OnPipeVolumeChanged(List<Pipe> value)
         {
             this.Rows.Cast<DataGridViewRow>().Each(r =>
             {
-                if (this.AutoCalculate && this.IsHeightFulfilled(r.Index))
+                if (this.AutoCalculate && IsHeightFulfilled(r.Index))
                 {
                     this.TryCalculateVolume(r.Index);
                 }

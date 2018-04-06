@@ -42,9 +42,10 @@ namespace ShippingMeasure
             this.header.HInclinationChanged += h => this.grid.HInclination = h;
             this.header.VInclinationChanged += v => this.grid.VInclination = v;
             this.header.SelectedKindOfGoodsChanged += k => this.grid.SelectedKindOfGoods = k;
+            this.header.PipeVolumeChanged += checkedPipeItems => this.grid.CheckedPipeItems = checkedPipeItems;
             this.header.Dirty += this.ReportDirty;
             this.grid.TotalOfVolumeOfStandardChanged += v => this.summary.TotalOfVolumeOfStandard = v;
-            this.grid.TotalOfVolumeChanged += v => this.summary.TotalOfVolume = v + this.header.TotalOfVolumeOfPipes;
+            //this.grid.TotalOfVolumeChanged += v => this.summary.TotalOfVolume = v + this.header.TotalOfVolumeOfPipes;
             this.grid.TotalOfVolumeOfWaterChanged += v => this.summary.TotalOfVolumeOfWater = v;
             this.grid.TotalOfMassChanged += v => this.summary.TotalOfMass = v;
             this.grid.Dirty += this.ReportDirty;
